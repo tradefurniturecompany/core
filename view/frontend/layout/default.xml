@@ -9,5 +9,18 @@
 https://github.com/tradefurniturecompany/core/issues/5 -->
 		<referenceBlock name='catalog.compare.sidebar' remove='true'/>
 		<referenceBlock name='wishlist_sidebar' remove='true'/>
-	</body>	
+<!-- 2019-10-07 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+"Magento 2.3.2 does not show the customer's name in the top-right corner":
+https://github.com/tradefurniturecompany/core/issues/9 -->
+		<referenceBlock name='customer'>
+			<action method='setTemplate'>
+				<argument name='template' xsi:type='string'>TFC_Core::Magento_Customer/account/customer.phtml</argument>
+			</action>
+		</referenceBlock>
+		<referenceBlock name='customer.desktop'>
+			<action method='setTemplate'>
+				<argument name='template' xsi:type='string'>TFC_Core::Magento_Customer/account/customer.phtml</argument>
+			</action>
+		</referenceBlock>
+	</body>
 </page>
