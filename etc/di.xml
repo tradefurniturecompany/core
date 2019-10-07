@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
+>
+<!-- 2019-10-07
+"Transfer the `\Magento\Framework\Stdlib\DateTime\Timezone::isScopeDateInInterval()` method modification
+to the `tradefurniturecompany/core` module":
+https://github.com/tradefurniturecompany/core/issues/13 -->
+	<type name='Magento\Framework\Stdlib\DateTime\Timezone'>
+		<plugin
+			name='TFC\Core\Plugin\Framework\Stdlib\DateTime\Timezone'
+			type='TFC\Core\Plugin\Framework\Stdlib\DateTime\Timezone'
+		/>
+	</type>
+</config>
