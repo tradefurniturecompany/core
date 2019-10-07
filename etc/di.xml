@@ -13,4 +13,14 @@ https://github.com/tradefurniturecompany/core/issues/13 -->
 			type='TFC\Core\Plugin\Framework\Stdlib\DateTime\Timezone'
 		/>
 	</type>
+<!-- 2019-10-07
+"Transfer the `\Magento\Tax\Helper\Data::getShippingPrice()` and `\Magento\Tax\Model\Config::needPriceConversion()`
+ methods modifications to the `tradefurniturecompany/core` module":
+https://github.com/tradefurniturecompany/core/issues/14 -->
+	<type name='Magento\Tax\Helper\Data'>
+		<plugin name='TFC\Core\Plugin\Tax\Helper\Data' type='TFC\Core\Plugin\Tax\Helper\Data'/>
+	</type>
+	<type name='Magento\Tax\Model\Config'>
+		<plugin name='TFC\Core\Plugin\Tax\Model\Config' type='TFC\Core\Plugin\Tax\Model\Config'/>
+	</type>
 </config>
