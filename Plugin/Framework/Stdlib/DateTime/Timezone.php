@@ -27,7 +27,7 @@ class Timezone extends Sb {
 		if (!$scope instanceof IScope) {
 			$scope = $sb->_scopeResolver->getScope($scope);
 		}
-		$scopeTimeStamp = $this->scopeTimeStamp($scope);
+		$scopeTimeStamp = $sb->scopeTimeStamp($scope);
 		$fromTimeStamp = strtotime($dateFrom);
 		$toTimeStamp = strtotime($dateTo);
 		/**
