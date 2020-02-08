@@ -4,7 +4,7 @@ A custom module for [tradefurniturecompany.co.uk](https://www.tradefurniturecomp
 ```             
 sudo service crond stop
 sudo service nginx stop                
-service php-fpm stop
+sudo service php-fpm stop
 bin/magento maintenance:enable
 rm -rf composer.lock
 composer clear-cache
@@ -23,7 +23,7 @@ bin/magento setup:static-content:deploy \
 	--theme TradeFurnitureCompany/default \
 	-f en_GB
 bin/magento maintenance:disable 
-service php-fpm start
+sudo service php-fpm start
 sudo service nginx start
 sudo service crond start
 ```
@@ -32,7 +32,7 @@ sudo service crond start
 ```              
 sudo service crond stop
 sudo service nginx stop                
-service php-fpm stop
+sudo service php-fpm stop
 bin/magento maintenance:enable
 composer remove tradefurniturecompany/core
 rm -rf composer.lock
@@ -52,7 +52,7 @@ bin/magento setup:static-content:deploy \
 	--theme TradeFurnitureCompany/default \
 	-f en_GB
 bin/magento maintenance:disable 
-service php-fpm start
+sudo service php-fpm start
 sudo service nginx start
 sudo service crond start
 ```
