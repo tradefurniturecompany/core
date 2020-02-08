@@ -1,7 +1,10 @@
 A custom module for [tradefurniturecompany.co.uk](https://www.tradefurniturecompany.co.uk) (Magento 2).  
 
 ## How to install
-```
+```             
+sudo service crond stop
+sudo service nginx stop                
+service php-fpm stop
 bin/magento maintenance:enable
 rm -rf composer.lock
 composer clear-cache
@@ -19,11 +22,17 @@ bin/magento setup:static-content:deploy \
 	--area frontend \
 	--theme TradeFurnitureCompany/default \
 	-f en_GB
-bin/magento maintenance:disable
+bin/magento maintenance:disable 
+service php-fpm start
+sudo service nginx start
+sudo service crond start
 ```
 
 ## How to upgrade
-```
+```              
+sudo service crond stop
+sudo service nginx stop                
+service php-fpm stop
 bin/magento maintenance:enable
 composer remove tradefurniturecompany/core
 rm -rf composer.lock
@@ -42,5 +51,8 @@ bin/magento setup:static-content:deploy \
 	--area frontend \
 	--theme TradeFurnitureCompany/default \
 	-f en_GB
-bin/magento maintenance:disable
+bin/magento maintenance:disable 
+service php-fpm start
+sudo service nginx start
+sudo service crond start
 ```
