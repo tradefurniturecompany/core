@@ -21,10 +21,10 @@ bin/magento setup:static-content:deploy \
 bin/magento setup:static-content:deploy \
 	--area frontend \
 	--theme TradeFurnitureCompany/default \
-	-f en_GB
-bin/magento maintenance:disable 
+	-f en_GB 
 sudo service php-fpm start
 sudo service nginx start
+bin/magento maintenance:disable
 sudo service crond start
 ```
 
@@ -51,8 +51,8 @@ bin/magento setup:static-content:deploy \
 	--area frontend \
 	--theme TradeFurnitureCompany/default \
 	-f en_GB
-bin/magento maintenance:disable 
 sudo service php-fpm start
 sudo service nginx start
+bin/magento maintenance:disable 
 sudo service crond start
 ```
