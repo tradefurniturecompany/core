@@ -13,6 +13,16 @@ https://github.com/tradefurniturecompany/core/issues/13 -->
 			type='TFC\Core\Plugin\Framework\Stdlib\DateTime\Timezone'
 		/>
 	</type>
+<!-- 2020-02-19
+1) "«The product that was requested doesn't exist. Verify the product and try again.»
+at vendor/magento/module-catalog/Model/ProductRepository.php:310":
+https://github.com/tradefurniturecompany/site/issues/20
+2) The `sales_order_item` table sometimes has a wrong `0` value in the `product_id` column
+for orders placed before the website was migrated to Magento 2:
+https://github.com/tradefurniturecompany/site/issues/20#issuecomment-587985765 -->
+	<type name='Magento\Sales\Model\Order'>
+		<plugin name='TFC\Core\Plugin\Sales\Model\Order' type='TFC\Core\Plugin\Sales\Model\Order'/>
+	</type>
 <!-- 2019-10-07
 "Transfer the `\Magento\Tax\Helper\Data::getShippingPrice()` and `\Magento\Tax\Model\Config::needPriceConversion()`
  methods modifications to the `tradefurniturecompany/core` module":
