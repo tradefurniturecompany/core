@@ -1,0 +1,25 @@
+<!-- 2020-01-17 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+1) "Defer offscreen images for the Slick slider of the home page":
+https://github.com/tradefurniturecompany/site/issues/153
+2) https://kenwheeler.github.io/slick -->
+<script type='text/javascript'>
+require(['jquery', 'slick', 'domReady'], function($) {
+    $('.furniture-links-double').slick({
+		arrows: true,
+		autoplay: true,
+		dots: false,
+		infinite: true,
+		lazyLoad: 'ondemand',
+		nextArrow: '.furniture-links-arrows--next',
+		prevArrow: '.furniture-links-arrows--prev',
+		responsive: [
+			{breakpoint: 1280, settings: {slidesToScroll: 1, slidesToShow: 3}},
+			{breakpoint: 768, settings: {slidesToScroll: 1, slidesToShow: 3}},
+			{breakpoint: 600, settings: {slidesToScroll: 1, slidesToShow: 1}}
+		],
+		slidesToScroll: 1,
+		slidesToShow: 3,
+		speed: 1000
+    });
+});
+</script>
