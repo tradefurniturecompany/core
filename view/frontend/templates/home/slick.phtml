@@ -1,0 +1,152 @@
+<!-- 2020-01-17 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+1) "Defer offscreen images for the Slick slider of the home page":
+https://github.com/tradefurniturecompany/site/issues/153
+2) https://kenwheeler.github.io/slick -->
+<?php use TFC\Core\B\Home\Slick as B; /** @var B $block */ /** @var B $b */ $b = $block; ?>
+<div class='widget block block-static-block'>
+	<div class='furniture-links-wrapper'>
+		<div class='furniture-links furniture-links-double'>
+			<div class='furniture-link'>
+				<?= $b->i('light_dakota', 'light_dakota') ?>
+				<p class='heading'>LIGHT DAKOTA</p>
+				<?= $b->i('dakota', 'dakota', 500, 350) ?>
+				<p class='heading'>DARK DAKOTA</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('mango-light', 'mango_light', 500, 350) ?>
+				<p class='heading'>LIGHT MANGO</p>
+				<?= $b->i('mango-dark', 'mango_dark', 500, 350) ?>
+				<p class='heading'>DARK MANGO</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('light-vintage', 'light_vintage') ?>
+				<p class='heading'>LIGHT VINTAGE</p>
+				<?= $b->i('vintage', 'vintage', 500, 350) ?>
+				<p class='heading'>DARK VINTAGE</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('cube-light', 'cube_light') ?>
+				<p class='heading'>CUBE LIGHT</p>
+				<?= $b->i('cube-dark', 'cube_honey') ?>
+				<p class='heading'>CUBE HONEY</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('cube-natural', 'cube_natural') ?>
+				<p class='heading'>CUBE NATURAL</p>
+				<?= $b->i('jali-light', 'jali_light') ?>
+				<p class='heading'>JALI LIGHT</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('jali-dark', 'jali_honey') ?>
+				<p class='heading'>JALI HONEY</p>
+				<?= $b->i('jali-natural', 'jali_natural') ?>
+				<p class='heading'>JALI NATURAL</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('light-retro-chic', 'Light_Retro_CHic', 500, 350, 'Light Retro Chic') ?>
+				<p class='heading'>LIGHT RETRO CHIC</p>
+				<?= $b->i('retro-chic', 'retro_chic', 500, 350) ?>
+				<p class='heading'>DARK RETRO CHIC</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('light-vintage-mango', 'light_vintage_mango') ?>
+				<p class='heading'>LIGHT VINTAGE MANGO</p>
+				<?= $b->i('vintage-mango', 'vintage_mango') ?>
+				<p class='heading'>VINTAGE MANGO</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('reclaimed-indian-furniture', 'reclaimed_indian_furniture') ?>
+				<p class='heading'>RECLAIMED INDIAN FURNITURE</p>
+				<?= $b->i('recycled-retro', 'recycled_retro') ?>
+				<p class='heading'>RECYCLED RETRO</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('lyon-white-painted-oak', 'Lyon', 500, 350, 'Lyon Furniture') ?>
+				<p class='heading'>LYON</p>
+				<?= $b->i('greyton-painted-oak', 'Greyton', 500, 350, 'Greyton TV Unit') ?>
+				<p class='heading'>GREYTON</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('cuba-light', 'cuba_light') ?>
+				<p class='heading'>CUBA LIGHT</p>
+				<?= $b->i('cuba-dark', 'cuba_honey') ?>
+				<p class='heading'>CUBA HONEY</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('cuba-natural', 'cuba_natural') ?>
+				<p class='heading'>CUBA NATURAL</p>
+				<?= $b->i('industrial-furniture', 'industrial', 500, 350) ?>
+				<p class='heading'>INDUSTRIAL FURNITURE</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('rough-sawn-retro', 'rough_sawn_retro') ?>
+				<p class='heading'>ROUGH SAWN RETRO</p>
+				<?= $b->i('reclaimed-teak-root', 'teak_root') ?>
+				<p class='heading'>TEAK ROOT</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('retro-mango', 'retro_mango') ?>
+				<p class='heading'>RETRO MANGO</p>
+				<?= $b->i('light-retro-mango', 'light_retro_mango', 500, 350) ?>
+				<p class='heading'>RETRO MANGO LIGHT</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('reclaimed-teak', 'reclaimed_teak') ?>
+				<p class='heading'>RECLAIMED TEAK</p>
+				<?= $b->i('rattan', 'rattan') ?>
+				<p class='heading'>RATTAN</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('rattan-home', 'rattan_home') ?>
+				<p class='heading'>RATTAN HOME</p>
+				<?= $b->i('homeware', 'homeware') ?>
+				<p class='heading'>HOMEWARE</p>
+			</div>
+			<div class='furniture-link'>
+				<?= $b->i('atlanta', 'atlanta') ?>
+				<p class='heading'>ATLANTA</p>
+				<?= $b->i('mobel-oak', 'mobel_oak') ?>
+				<p class='heading'>MOBEL OAK</p>
+			</div>
+		</div>
+		<p class='category-links-arrows furniture-links-arrows'>
+			<?=
+				df_cc_n(
+					df_tag('img', df_clean([
+						'alt' => 'previous'
+						,'class' => 'furniture-links-arrows--prev'
+						,'src' => $b->getViewFileUrl('images/prev.png')
+					]))
+					,df_tag('img', df_clean([
+						'alt' => 'Next'
+						,'class' => 'furniture-links-arrows--next'
+						,'src' => $b->getViewFileUrl('images/next.png')
+					]))
+				)
+			?>
+		</p>
+	</div>
+</div>
+<script type='text/javascript'>
+require(['jquery', 'slick', 'domReady'], function($) {
+	setTimeout(function() {
+		$('.furniture-links-double').slick({
+			arrows: true,
+			autoplay: true,
+			dots: false,
+			infinite: true,
+			lazyLoad: 'ondemand',
+			nextArrow: '.furniture-links-arrows--next',
+			prevArrow: '.furniture-links-arrows--prev',
+			responsive: [
+				{breakpoint: 1280, settings: {slidesToScroll: 1, slidesToShow: 3}},
+				{breakpoint: 768, settings: {slidesToScroll: 1, slidesToShow: 3}},
+				{breakpoint: 600, settings: {slidesToScroll: 1, slidesToShow: 1}}
+			],
+			slidesToScroll: 1,
+			slidesToShow: 3,
+			speed: 1000
+		});
+	}, 5000);
+});
+</script>
