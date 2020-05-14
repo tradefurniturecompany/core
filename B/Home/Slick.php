@@ -1,7 +1,7 @@
 <?php
 namespace TFC\Core\B\Home;
 use Magento\Framework\View\Element\Template as _P;
-// 2020-01-18 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+// 2020-01-18
 class Slick extends _P {
 	/**
 	 * 2020-01-18
