@@ -156,6 +156,8 @@ require(['jquery', 'slick', 'domReady'], function($) {
 		slidesToShow: 3,
 		speed: 1000
 	});};
-	$w.scroll(function() {done || !visible() || init();});
+	var check = function() {done || !visible() || init();};
+	$w.scroll(check);
+	check();
 });
 </script>

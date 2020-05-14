@@ -1,0 +1,25 @@
+<!-- 2020-05-15
+"Hide the text between sliders into a collapsible box on narrow screens":
+https://github.com/tradefurniturecompany/core/issues/29 -->
+<div class='tfc-welcome'>
+	<div class='tfc-contents tfc-welcome-hidden'>
+		<p>Welcome to Trade Furniture Company, the market leaders in <a title='Mango' href='<?= df_url("mango-furniture") ?>'>Mango</a> and <a title='Sheesham' href='<?= df_url("sheesham-furniture") ?>'>Sheesham</a> 100% solid wood furniture.</p>
+		<p>If you are looking for high quality solid wood furniture you have come to the right place. We have a superior range of solid wood furniture that will make your house a home.</p>
+		<p>Whether you want beautiful wooden furniture for every room of the house or you are shopping for a specific room, we are confident we can cater for your requirements. * Our price match is based on any other outlet using the same size dimensions.</p>
+	</div>
+	<div class='tfc-toggle closed'><div>…</div></div>
+</div>
+<script type='text/javascript'>
+require(['jquery', 'domReady'], function($) {
+	var $c = $('.tfc-welcome');
+	var $contents = $('.tfc-contents', $c);
+	var $toggle = $('.tfc-toggle', $c);
+	var $toggleText = $toggle.children('div');
+	$toggle.click(function() {
+		$contents.toggleClass('tfc-welcome-hidden');
+		var hidden = $contents.hasClass('tfc-welcome-hidden');
+		$toggleText.text(hidden ? '…' : '×');
+		$toggle.toggleClass('closed', hidden);
+	});
+});
+</script>
