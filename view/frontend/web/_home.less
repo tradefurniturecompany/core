@@ -1,55 +1,44 @@
 // 2020-05-14
 // "Hide the text between the home page's sliders into a collapsible box on narrow screens"
 // https://github.com/tradefurniturecompany/core/issues/29
-.tfc-welcome {
-	p {text-align: center;}
-	@media (min-width: 768px) {> .tfc-toggle {display: none;}}
-}
-@media only screen and (max-width: 767px) {
-	.page-header {
-		border-bottom: 0 !important;
-		padding-bottom: 0 !important;
-		> .header.content {
-			padding-top: 0;
-			> .ammenu-menu-toggle {top: 10px}
-			> .header-actions-wrapper {
-				margin-top: 0.4em;
-				> .minicart-wrapper .action.showcart:before {margin-top: -0.1em;}
-				> .mobile-phone-icon a:before {margin-top: 0.2em;}
-			}
-		}
+body.cms-home {
+	.tfc-welcome {
+		p {text-align: center;}
+		@media (min-width: 768px) {> .tfc-toggle {display: none;}}
 	}
-	.column.main {
-		// 2020-05-15 They are empty <p></p> tags.
-		#social-login-popup ~ p, .widget ~ p, > .fixed-width-content > p {display: none; margin: 0;}
-		// 2020-05-15 https://stackoverflow.com/a/18672728
-		> .fixed-width-content > .widget:nth-of-type(-n+2) {margin-bottom: 0;}
-		//> #social-login-popup + div + p {display: none;}
-		> .widget {
-			margin-bottom: 0;
-			> .custom-slider {
-				padding-bottom: 0;
-				.owl-stage-outer {padding: 0;}
+	@media only screen and (max-width: 767px) {
+		.column.main {
+			// 2020-05-15 They are empty <p></p> tags.
+			#social-login-popup ~ p, .widget ~ p, > .fixed-width-content > p {display: none; margin: 0;}
+			// 2020-05-15 https://stackoverflow.com/a/18672728
+			> .fixed-width-content > .widget:nth-of-type(-n+2) {margin-bottom: 0;}
+			//> #social-login-popup + div + p {display: none;}
+			> .widget {
+				margin-bottom: 0;
+				> .custom-slider {
+					padding-bottom: 0;
+					.owl-stage-outer {padding: 0;}
+				}
 			}
-		}
-		.tfc-welcome {
-			margin-top: 1em;
-			> .tfc-contents {
-				margin-bottom: 0.5em;
-				&.tfc-welcome-hidden {display: none;}
-			}
-			> .tfc-toggle {
-				background-color: rgb(244, 244, 244);
-				border-radius: 0.2em;
-				font-size: 2em;
-				font-weight: 900;
-				line-height: 1em;
-				margin: 0 auto;
-				text-align: center;
-				width: 1em;
-				&.closed {
-					font-weight: 600; line-height: 0.7em; width: 2em;
-					> div {position: relative; transform: translateY(-40%);}
+			.tfc-welcome {
+				margin-top: 1em;
+				> .tfc-contents {
+					margin-bottom: 0.5em;
+					&.tfc-welcome-hidden {display: none;}
+				}
+				> .tfc-toggle {
+					background-color: rgb(244, 244, 244);
+					border-radius: 0.2em;
+					font-size: 2em;
+					font-weight: 900;
+					line-height: 1em;
+					margin: 0 auto;
+					text-align: center;
+					width: 1em;
+					&.closed {
+						font-weight: 600; line-height: 0.7em; width: 2em;
+						> div {position: relative; transform: translateY(-40%);}
+					}
 				}
 			}
 		}
