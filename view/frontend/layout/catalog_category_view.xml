@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<page
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+<!-- 2020-05-15 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+"Hide the text below the primary image from the «Collections» (`/more-collections`) page on narrow screens":
+https://github.com/tradefurniturecompany/core/issues/30 -->
+	<body><referenceContainer name='root'><block class='TFC\Core\B\Category'/></referenceContainer></body>
+</page>

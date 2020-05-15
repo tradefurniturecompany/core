@@ -1,0 +1,17 @@
+// 2020-05-15 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+// "Hide the text below the primary image from the «Collections» (`/more-collections`) page on narrow screens":
+// https://github.com/tradefurniturecompany/core/issues/30
+@import 'css/mixin/_toggled-text';
+body.catalog-category-view {
+	@media only screen and (max-width: 767px) {
+		#maincontent {
+			h1.page-title {margin: 0.1em 0;}
+			.category-view-image-desc {
+				//> .category-cms:empty {display: none;}
+				> .category-description {display: none;}
+				> .category-image {margin-bottom: 15px;}
+				.tfc-toggle-m();
+			}
+		}
+	}
+}

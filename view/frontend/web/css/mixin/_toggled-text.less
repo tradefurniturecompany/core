@@ -1,0 +1,23 @@
+// 2020-05-15
+// 1) "Hide the text between the home page's sliders into a collapsible box on narrow screens"
+// https://github.com/tradefurniturecompany/core/issues/29
+// 2) "Hide the text below the primary image from the «Collections» (`/more-collections`) page on narrow screens":
+// https://github.com/tradefurniturecompany/core/issues/30
+.tfc-hidden-ge768 {display: none;}
+@media (min-width: 768px) {.tfc-toggle {display: none;}}
+.tfc-toggle-m() {
+	> .tfc-toggle {
+		background-color: rgb(244, 244, 244);
+		border-radius: 0.2em;
+		font-size: 2em;
+		font-weight: 900;
+		line-height: 1em;
+		margin: 0 auto;
+		text-align: center;
+		width: 1em;
+		&.closed {
+			font-weight: 600; line-height: 0.7em; width: 2em;
+			> div {position: relative; transform: translateY(-40%);}
+		}
+	}
+}
