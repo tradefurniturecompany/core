@@ -11,7 +11,7 @@ composer clear-cache
 composer require tradefurniturecompany/core:*
 bin/magento setup:upgrade
 bin/magento cache:enable
-rm -rf var/di var/generation generated/code
+rm -rf var/di var/generation generated/*
 bin/magento setup:di:compile
 rm -rf pub/static/*
 bin/magento setup:static-content:deploy \
@@ -40,7 +40,7 @@ composer clear-cache
 composer require tradefurniturecompany/core:*
 bin/magento setup:upgrade
 bin/magento cache:enable
-rm -rf var/di var/generation generated/code
+rm -rf var/di var/generation generated/*
 bin/magento setup:di:compile
 rm -rf pub/static/*
 bin/magento setup:static-content:deploy \
