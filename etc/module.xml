@@ -9,6 +9,7 @@
 			<module name='Magento_Framework'/>
 			<module name='Magento_Tax'/>
 			<module name='Magento_Wishlist'/>
+			<module name='Df_Core'/>
 		</sequence>
 	</module>
 </config>
