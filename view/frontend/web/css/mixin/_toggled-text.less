@@ -3,8 +3,8 @@
 // https://github.com/tradefurniturecompany/core/issues/29
 // 2) "Hide the text below the primary image from the «Collections» (`/more-collections`) page on narrow screens":
 // https://github.com/tradefurniturecompany/core/issues/30
-.tfc-hidden-ge768 {display: none;}
-@media (min-width: 768px) {.tfc-toggle {display: none;}}
+@media only screen and (max-width: 767px) {.tfc-hidden-ge768 {display: none;}}
+@media only screen and (min-width: 768px) {.tfc-toggle {display: none;}}
 .tfc-toggle-m() {
 	> .tfc-toggle {
 		background-color: rgb(244, 244, 244);
