@@ -23,14 +23,21 @@ https://github.com/tradefurniturecompany/site/issues/20#issuecomment-587985765 -
 	<type name='Magento\Sales\Model\Order'>
 		<plugin name='TFC\Core\Plugin\Sales\Model\Order' type='TFC\Core\Plugin\Sales\Model\Order'/>
 	</type>
-<!-- 2019-10-07
+<!--
+2019-10-07
 "Transfer the `\Magento\Tax\Helper\Data::getShippingPrice()` and `\Magento\Tax\Model\Config::needPriceConversion()`
  methods modifications to the `tradefurniturecompany/core` module":
-https://github.com/tradefurniturecompany/core/issues/14 -->
+https://github.com/tradefurniturecompany/core/issues/14
+2020-07-01
+1) «change the delivery options and also the delivery charges calculated»:
+https://github.com/tradefurniturecompany/core/issues/32
+2) Currently, we do not need these plugins anymore:
+https://github.com/tradefurniturecompany/core/issues/32#issuecomment-652184733
 	<type name='Magento\Tax\Helper\Data'>
 		<plugin name='TFC\Core\Plugin\Tax\Helper\Data' type='TFC\Core\Plugin\Tax\Helper\Data'/>
 	</type>
 	<type name='Magento\Tax\Model\Config'>
 		<plugin name='TFC\Core\Plugin\Tax\Model\Config' type='TFC\Core\Plugin\Tax\Model\Config'/>
 	</type>
+-->
 </config>
