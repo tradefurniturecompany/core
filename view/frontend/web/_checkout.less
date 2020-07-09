@@ -1,6 +1,10 @@
 // 2020-07-07 "Enhance the checkout appearance": https://github.com/tradefurniturecompany/core/issues/36
 .step-content {padding-top: 0 !important;}
-fieldset#payment_form_realexpayments_hpp {
-	display: none;
-	& + * {display: none;}
+#co-payment-form > fieldset:last-child {
+	margin-bottom: 0;
+	fieldset#payment_form_realexpayments_hpp {
+		display: none;
+		& + * {display: none;}
+	}
+	.payment-method.df-cashondelivery > .payment-method-content {display: none !important;}
 }
