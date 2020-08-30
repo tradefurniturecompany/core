@@ -11,7 +11,7 @@ use Magento\Framework\Event\ObserverInterface;
  * 		$r = $o[self::SKIP] || parent::handle($d);
  * https://github.com/mage2pro/core/blob/6.8.1/Framework/Logger/Handler/System.php#L44-L45
  * 2) "Prevent Magento from logging the «PayPal NVP gateway errors: You do not have permissions to make this API call
- * (#10002: Authentication/Authorization Failed).» message": https://github.com/tradefurniturecompany/site/issues/180
+ * (#10002: Authentication/Authorization Failed).» message": https://github.com/tradefurniturecompany/core/issues/38
  */
 final class CanLog implements ObserverInterface {
 	/**

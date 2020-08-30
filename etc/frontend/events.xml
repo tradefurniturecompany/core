@@ -5,6 +5,6 @@
 >
 <!-- 2020-08-30
 "Prevent Magento from logging the «PayPal NVP gateway errors: You do not have permissions to make this API call
-(#10002: Authentication/Authorization Failed).» message": https://github.com/tradefurniturecompany/site/issues/180 -->
+(#10002: Authentication/Authorization Failed).» message": https://github.com/tradefurniturecompany/core/issues/38 -->
 	<event name='df_can_log'><observer instance='TFC\Core\Observer\CanLog' name='TFC\Core\Observer\CanLog'/></event>
 </config>
