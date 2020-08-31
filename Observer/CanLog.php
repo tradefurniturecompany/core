@@ -23,6 +23,6 @@ final class CanLog implements ObserverInterface {
 	 */
 	function execute(Observer $ob) {
 		$m = $ob[E::P_MESSAGE]; /** @var array(string => mixed) $m */
-		$ob[E::P_RESULT][E::V_SKIP] = df_contains(dfa($d, 'message'), 'You do not have permissions to make this API call');
+		$ob[E::P_RESULT][E::V_SKIP] = df_contains(dfa($m, 'message'), 'You do not have permissions to make this API call');
 	}
 }
