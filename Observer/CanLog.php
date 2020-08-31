@@ -1,6 +1,6 @@
 <?php
 namespace TFC\Core\Observer;
-use Df\Framework\Logger\Handler\System as E;
+use Df\Framework\Logger\Handler as E;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 /**
