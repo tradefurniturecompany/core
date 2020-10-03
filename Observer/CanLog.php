@@ -13,7 +13,7 @@ use Magento\Framework\Event\ObserverInterface;
  */
 final class CanLog implements ObserverInterface {
 	/**
-	 * 2017-01-17
+	 * 2020-08-30
 	 * @override
 	 * @see ObserverInterface::execute()
 	 * @used-by \Magento\Framework\Event\Invoker\InvokerDefault::_callObserverMethod()
