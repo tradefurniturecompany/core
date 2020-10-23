@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
+>
+<!-- 2020-10-24
+"Remove the «sort by position» option from the category page": https://github.com/tradefurniturecompany/site/issues/194 -->
+	<type name='Magento\Catalog\Model\Config'>
+		<plugin name='TFC\Core\Plugin\Catalog\Model\Config' type='TFC\Core\Plugin\Catalog\Model\Config'/>
+	</type>
+</config>
