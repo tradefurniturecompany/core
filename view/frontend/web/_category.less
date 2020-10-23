@@ -19,9 +19,11 @@ body.catalog-category-view #maincontent {
 	.toolbar-products {margin-bottom: 0;}
 	.products-grid {
 		margin: 0; padding-bottom: 0;
+		@media (max-width: 639px) {margin-top: 0.75rem;}
 		> .products {
 			margin: 0;
 			> .product-item > .product-item-info {
+				@media (max-width: 639px) {padding: 0;}
 				@media (min-width: 640px) {
 					border: 0; padding: 2px;
 					&:hover, &.active {padding: 0; border-width: 2px !important;}
