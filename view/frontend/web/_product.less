@@ -1,0 +1,15 @@
+// 2020-10-23 «Improve the frontend product page»: https://github.com/tradefurniturecompany/site/issues/191
+body.catalog-product-view {
+	.desktop-sticky-bar {
+		> .product-info-price {
+			border: 0; margin-bottom: 0;
+			> .price-box {padding-bottom: 0;}
+		}
+	}
+	#imega-widget-anchor {margin: 0; padding: 0;}
+	.product-social-links {
+		@media (min-width: 640px) {font-size: 1.3rem; margin-bottom: 0;}
+		@media (max-width: 639px) {font-size: 1.3rem;}
+		a {letter-spacing: initial !important;}
+	}
+}
