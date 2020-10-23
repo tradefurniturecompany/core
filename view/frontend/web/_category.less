@@ -27,6 +27,11 @@ body.catalog-category-view #maincontent {
 					&:hover, &.active {padding: 0; border-width: 2px !important;}
 				}
 				.product-item-actions {
+					// 2020-10-24
+					// "Remove the «Add to Wishlist» and «Add to Backet» controls
+					// from the frontend category page on narrow screens":
+					// https://github.com/tradefurniturecompany/site/issues/193
+					@media (max-width: 639px) {display: none;}
 					@media (min-width: 640px) {
 						margin-bottom: 0;
 						> .actions-primary {position: absolute; top: -200px;}
