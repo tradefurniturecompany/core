@@ -14,6 +14,7 @@ https://github.com/tradefurniturecompany/site/issues/192 -->
 		<referenceBlock name='upsell.product.addto.compare' remove='true'/>
 		<referenceBlock name='view.addto.compare' remove='true'/>
 		<referenceBlock name='view.addto.compare.bundle' remove='true'/>
+		<referenceContainer name='compare-link-wrapper' remove='true'/>
 <!-- 2019-10-01
 "Remove the «Compare Products» and «My Wish List» blocks from all frontend pages":
 https://github.com/tradefurniturecompany/core/issues/5 -->
