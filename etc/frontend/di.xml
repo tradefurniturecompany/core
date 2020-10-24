@@ -5,7 +5,13 @@
 >
 <!-- 2020-10-24
 "Remove the «sort by position» option from the category page": https://github.com/tradefurniturecompany/site/issues/194 -->
-	<type name='Magento\Catalog\Model\Config'>
-		<plugin name='TFC\Core\Plugin\Catalog\Model\Config' type='TFC\Core\Plugin\Catalog\Model\Config'/>
+	<type name='Magento\Catalog\Model\Category'>
+		<plugin name='TFC\Core\Plugin\Catalog\Model\Category' type='TFC\Core\Plugin\Catalog\Model\Category'/>
+	</type>
+	<type name='SpringImport\CatalogDropdownSort\Block\Product\ProductList\Toolbar'>
+		<plugin
+			name='TFC\Core\Plugin\SpringImport\CatalogDropdownSort\Block\Product\ProductList\Toolbar'
+			type='TFC\Core\Plugin\SpringImport\CatalogDropdownSort\Block\Product\ProductList\Toolbar'
+		/>
 	</type>
 </config>
