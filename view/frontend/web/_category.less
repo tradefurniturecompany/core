@@ -16,7 +16,10 @@ body.catalog-category-view #maincontent {
 	// «Remove an extra empty space from the frontend product list page»
 	// https://github.com/tradefurniturecompany/site/issues/190
 	.filter.block {margin-bottom: 0;}
-	.toolbar-products {margin-bottom: 0;}
+	.toolbar-products {
+		margin-bottom: 0;
+		#toolbar-amount {text-transform: lowercase;}
+	}
 	.products-grid {
 		margin: 0; padding-bottom: 0;
 		@media (max-width: 639px) {margin-top: 0.75rem;}
