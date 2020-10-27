@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
+>
+<!-- 2020-10-28 "Improve the frontend product page": https://github.com/tradefurniturecompany/site/issues/191 -->
+	<type name='Magento\Catalog\Block\Product\View\GalleryOptions'>
+		<plugin
+			name='TFC\Core\Plugin\Catalog\Block\Product\View\GalleryOptions'
+			type='TFC\Core\Plugin\Catalog\Block\Product\View\GalleryOptions'
+		/>
+	</type>
+</config>
