@@ -1,0 +1,28 @@
+<?php
+namespace TFC\Core\Plugin\Theme\Block\Html;
+use Magento\Theme\Block\Html\Breadcrumbs as Sb;
+# 2020-10-28
+# "Remove «Home» from breadcrumbs on frontend product pages": https://github.com/tradefurniturecompany/site/issues/199
+final class Breadcrumbs {
+	/**
+	 * 2020-10-28
+	 * @see \Magento\Theme\Block\Html\Breadcrumbs::addCrumb()
+	 * @see \Magento\Catalog\Block\Breadcrumbs::_prepareLayout():
+	 *	$breadcrumbsBlock->addCrumb('home',[
+	 *		'label' => __('Home'),
+	 *		'title' => __('Go to Home Page'),
+	 *		'link' => $this->_storeManager->getStore()->getBaseUrl()
+	 *	]);
+	 * @param Sb $sb
+	 * @param \Closure $f
+	 * @param string $k
+	 * @param array(string => mixed) $d
+	 * @return Sb
+	 */
+	function aroundAddCrumb(Sb $sb, \Closure $f, $k, array $d) {
+		if ('home' !== $k || !df_is_catalog_product_view()) {
+			$f($k, $d);
+		}
+		return $sb;
+	}
+}

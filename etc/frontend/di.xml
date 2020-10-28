@@ -10,4 +10,9 @@
 			type='TFC\Core\Plugin\Catalog\Block\Product\View\GalleryOptions'
 		/>
 	</type>
+<!-- 2020-10-28
+"Remove «Home» from breadcrumbs on frontend product pages": https://github.com/tradefurniturecompany/site/issues/199 -->
+	<type name='Magento\Theme\Block\Html\Breadcrumbs'>
+		<plugin name='TFC\Core\Plugin\Theme\Block\Html\Breadcrumbs' type='TFC\Core\Plugin\Theme\Block\Html\Breadcrumbs'/>
+	</type>
 </config>
