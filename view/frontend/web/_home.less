@@ -4,7 +4,8 @@
 @import 'css/mixin/_toggled-text';
 body.cms-home {
 	.tfc-welcome p {text-align: center;}
-	@media only screen and (max-width: 767px) {
+	.owl-stage-outer {padding: 0;}
+	@media (max-width: 767px) {
 		.column.main {
 			// 2020-05-15 They are empty <p></p> tags.
 			#social-login-popup ~ p, .widget ~ p, > .fixed-width-content > p {display: none; margin: 0;}
@@ -12,10 +13,7 @@ body.cms-home {
 			> .fixed-width-content > .widget:nth-of-type(-n+2) {margin-bottom: 0;}
 			> .widget {
 				margin-bottom: 0;
-				> .custom-slider {
-					padding-bottom: 0;
-					.owl-stage-outer {padding: 0;}
-				}
+				> .custom-slider {padding-bottom: 0;}
 			}
 			.tfc-welcome {
 				margin-top: 1em;
