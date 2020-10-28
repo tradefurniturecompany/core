@@ -7,13 +7,13 @@ body.cms-home {
 	.owl-stage-outer {padding: 0;}
 	.column.main {
 		> p {display: none; margin: 0;} // 2020-05-15 They are empty <p></p> tags.
+		> .widget {
+			margin-bottom: 0;
+			> .custom-slider {padding-bottom: 0;}
+		}
 		@media (max-width: 767px) {
 			// 2020-05-15 https://stackoverflow.com/a/18672728
 			> .fixed-width-content > .widget:nth-of-type(-n+2) {margin-bottom: 0;}
-			> .widget {
-				margin-bottom: 0;
-				> .custom-slider {padding-bottom: 0;}
-			}
 			.tfc-welcome {
 				margin-top: 1em;
 				> .tfc-contents {margin-bottom: 0.5em;}
