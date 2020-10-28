@@ -2,7 +2,9 @@
 namespace TFC\Core\Plugin\Theme\Block\Html;
 use Magento\Theme\Block\Html\Breadcrumbs as Sb;
 # 2020-10-28
-# "Remove «Home» from breadcrumbs on frontend product pages": https://github.com/tradefurniturecompany/site/issues/199
+# 1) "Remove «Home» from breadcrumbs on frontend product pages": https://github.com/tradefurniturecompany/site/issues/199
+# 2) "Remove the product name from breadcrumbs on frontend product pages":
+# https://github.com/tradefurniturecompany/site/issues/198
 final class Breadcrumbs {
 	/**
 	 * 2020-10-28
@@ -20,7 +22,7 @@ final class Breadcrumbs {
 	 * @return Sb
 	 */
 	function aroundAddCrumb(Sb $sb, \Closure $f, $k, array $d) {
-		if ('home' !== $k || !df_is_catalog_product_view()) {
+		if (!in_array($k, ['home', 'product']) || !df_is_catalog_product_view()) {
 			$f($k, $d);
 		}
 		return $sb;

@@ -11,7 +11,9 @@
 		/>
 	</type>
 <!-- 2020-10-28
-"Remove «Home» from breadcrumbs on frontend product pages": https://github.com/tradefurniturecompany/site/issues/199 -->
+1) "Remove «Home» from breadcrumbs on frontend product pages": https://github.com/tradefurniturecompany/site/issues/199
+2) "Remove the product name from breadcrumbs on frontend product pages":
+https://github.com/tradefurniturecompany/site/issues/198 -->
 	<type name='Magento\Theme\Block\Html\Breadcrumbs'>
 		<plugin name='TFC\Core\Plugin\Theme\Block\Html\Breadcrumbs' type='TFC\Core\Plugin\Theme\Block\Html\Breadcrumbs'/>
 	</type>
