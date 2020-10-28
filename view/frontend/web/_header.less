@@ -1,18 +1,15 @@
-// 2020-05-18
-.page-header {border-bottom: 0 !important;}
-// 2020-05-15
-// "Decrease the header's height on narrow screens": https://github.com/tradefurniturecompany/core/issues/31
-@media only screen and (max-width: 767px) {
-	.page-header {
-		padding-bottom: 0 !important;
-		> .header.content {
-			padding-top: 0;
-			> .ammenu-menu-toggle {top: 10px}
-			> .header-actions-wrapper {
-				margin-top: 0.4em;
-				> .minicart-wrapper .action.showcart:before {margin-top: -0.1em;}
-				> .mobile-phone-icon a:before {margin-top: 0.2em;}
-			}
+// 2020-05-15 "Decrease the header's height on narrow screens": https://github.com/tradefurniturecompany/core/issues/31
+// 2020-10-28 "Improve the frontend header": https://github.com/tradefurniturecompany/site/issues/200
+.page-header {
+	border-bottom: 0 !important;
+	padding-bottom: 0 !important;
+	> .header.content {
+		padding-top: 0;
+		@media (max-width: 767px) {> .ammenu-menu-toggle {top: 10px}}
+		> .header-actions-wrapper {
+			margin-top: 0.4rem; @media (min-width: 768px) {margin-top: 0.8rem;}
+			@media (max-width: 767px) {.block-search .label:before {line-height: inherit; margin-top: -2px;}}
 		}
+		> .header-info-wrapper {@media (min-width: 768px) {align-content: flex-start;}}
 	}
 }
