@@ -54,27 +54,33 @@ body.catalog-category-view #maincontent {
 							&:hover, &.active {padding: 0; border-width: 2px !important;}
 						}
 						> .details {
-							> .price-box.price-final_price {
-								min-height: auto;
-								@media (max-width: 639px) {margin: 0;}
+							> .price-and-wishlist {
+								overflow: hidden; width: 100%;
+								> .price-box.price-final_price {
+									float: left; margin: 0; min-height: auto;
+									//@media (max-width: 639px) {margin: 0;}
+								}
+								> .actions-secondary-container {float: right; padding-right: 0.25rem;}
 							}
-							> .name {@media (max-width: 639px) {margin: 0;}}
-							.product-item-link {
-								height: auto;
-								@media (max-width: 639px) {font-size: 1.33rem;}
+							> .name {
+								margin-top: 0; @media (max-width: 639px) {margin-bottom: 0;}
+								> .product-item-link {
+									height: auto;
+									@media (max-width: 639px) {font-size: 1.33rem;}
+								}
 							}
-						}
-						.product-item-actions {
-							// 2020-10-24
-							// "Remove the «Add to Wishlist» and «Add to Backet» controls
-							// from the frontend category page on narrow screens":
-							// https://github.com/tradefurniturecompany/site/issues/193
-							@media (max-width: 639px) {display: none;}
-							@media (min-width: 640px) {
-								margin-bottom: 0;
-								> .actions-primary {position: absolute; top: -200px;}
+							.product-item-actions {
+								// 2020-10-24
+								// "Remove the «Add to Wishlist» and «Add to Backet» controls
+								// from the frontend category page on narrow screens":
+								// https://github.com/tradefurniturecompany/site/issues/193
+								@media (max-width: 639px) {display: none;}
+								@media (min-width: 640px) {
+									margin: 0;
+									> .actions-primary {position: absolute; top: -200px;}
+								}
+								> .actions-secondary > .action {line-height: initial; width: auto;}
 							}
-							> .actions-secondary > .action {width: auto;}
 						}
 					}
 				}
