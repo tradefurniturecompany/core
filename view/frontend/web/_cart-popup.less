@@ -1,4 +1,20 @@
 // 2020-10-28 "Improve the mini-cart popup": https://github.com/tradefurniturecompany/site/issues/202
-.block-minicart > #minicart-content-wrapper > .block-content {
-	> .subtotal > .label:after {margin-left: -0.5rem;}
+.block-minicart {
+	padding: 1rem 1rem 0 1rem !important;
+	> #minicart-content-wrapper > .block-content {
+		> .items-total, > .subtotal {
+			margin: 0;
+			@media (min-width: 768px) {line-height: 3.3rem;}
+		}
+		> .items-total {text-transform: lowercase;}
+		> .subtotal {
+			float: right; overflow: hidden; width: 66%;
+			> .amount {display: inline;}
+			> .label:after {margin-left: -0.5rem;}
+		}
+		> .actions {
+			margin-top: 0.5rem;
+			> .primary {margin: 0;}
+		}
+	}
 }
