@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<config
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='urn:magento:module:Magento_Store:etc/config.xsd'
+>
+<!--
+2020-12-13 "`WeltPixel_OwlCarouselSlider`: properly size images": https://github.com/tradefurniturecompany/site/issues/158
+2020-12-13
+This configuration is used by https://github.com/magento/magento2/blob/2.3.2/pub/get.php#L20-L27
+It declares starting request paths for images which could be generated dynamically if absent. -->
+    <default>
+		<system>
+            <media_storage_configuration>
+                <allowed_resources>
+                    <tfc_weltpixel_owlcarouselslider>media/weltpixel/owlcarouselslider/images</tfc_weltpixel_owlcarouselslider>
+                </allowed_resources>
+            </media_storage_configuration>
+		</system>
+    </default>
+</config>

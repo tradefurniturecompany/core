@@ -13,6 +13,11 @@ https://github.com/tradefurniturecompany/core/issues/13 -->
 			type='TFC\Core\Plugin\Framework\Stdlib\DateTime\Timezone'
 		/>
 	</type>
+<!-- 2020-12-13
+"`WeltPixel_OwlCarouselSlider`: properly size images": https://github.com/tradefurniturecompany/site/issues/158 -->
+	<type name='Magento\MediaStorage\App\Media'>
+		<plugin name='TFC\Core\Plugin\MediaStorage\App\Media' type='TFC\Core\Plugin\MediaStorage\App\Media'/>
+	</type>
 <!-- 2020-02-19
 1) "«The product that was requested doesn't exist. Verify the product and try again.»
 at vendor/magento/module-catalog/Model/ProductRepository.php:310":
