@@ -18,6 +18,12 @@ https://github.com/tradefurniturecompany/core/issues/13 -->
 	<type name='Magento\MediaStorage\App\Media'>
 		<plugin name='TFC\Core\Plugin\MediaStorage\App\Media' type='TFC\Core\Plugin\MediaStorage\App\Media'/>
 	</type>
+<!-- 2020-12-24
+«PayPal gateway has rejected request. The totals of the cart item amounts do not match order amounts»:
+https://github.com/tradefurniturecompany/site/issues/211 -->
+	<type name='Magento\Paypal\Model\Cart'>
+		<plugin name='TFC\Core\Plugin\Paypal\Model\Cart' type='TFC\Core\Plugin\Paypal\Model\Cart'/>
+	</type>
 <!-- 2020-02-19
 1) "«The product that was requested doesn't exist. Verify the product and try again.»
 at vendor/magento/module-catalog/Model/ProductRepository.php:310":
