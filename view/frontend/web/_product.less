@@ -9,6 +9,7 @@ body.catalog-product-view {
 		> .desktop-sticky-bar {
 			> .sticky-add-to-basket {
 				margin: 0;
+				@media (max-width: 767px) {display: initial;}
 			}
 			> .page-title-wrapper {
 				// 2020-12-30
@@ -38,6 +39,11 @@ body.catalog-product-view {
 		> .product-social-links {
 			font-size: 1.3rem; @media (min-width: 768px) {margin-bottom: 0;}
 			a {letter-spacing: initial !important;}
+		}
+	}
+	.product-add-form > form {
+		> .product-options-bottom {
+			&, & > .box-tocart {display: initial;}
 		}
 	}
 }
