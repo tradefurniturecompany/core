@@ -41,16 +41,33 @@ body.catalog-product-view {
 			a {letter-spacing: initial !important;}
 		}
 	}
-	.product-add-form > form {
-		// 2021-01-08 The `.product-options-bottom` wrapper is added for products with options.
-		> .product-options-bottom {&, & > .box-tocart {display: initial;}}
-		&, & > .product-options-bottom {
-			> .box-tocart > .fieldset > .actions > button {
-				background-color: #f3931a;
-				font-size: 1.8rem;
-				line-height: 2rem;
-				padding: 7px 15px;
-				width: initial;
+	.product-add-form {
+		margin: 0; padding: 0;
+		> form {
+			// 2021-01-08 The `.product-options-bottom` wrapper is added for products with options.
+			> .product-options-bottom {&, & > .box-tocart {display: initial;}}
+			&, & > .product-options-bottom {
+				> .box-tocart {
+					margin: 0;
+					> .fieldset {
+						margin: 0;
+						> .actions > button {
+							background-color: #f3931a;
+							font-size: 1.8rem;
+							line-height: 2rem;
+							padding: 7px 15px;
+							width: initial;
+							> span::before {content: '\e611'; font-family: 'icomoon4'; margin-right: 5px;}
+						}
+					}
+				}
+			}
+			> .product-options-wrapper {
+				margin: 0;
+				> .fieldset {
+					margin: 0;
+					> .field:last-of-type {margin-bottom: 0;}
+				}
 			}
 		}
 	}
