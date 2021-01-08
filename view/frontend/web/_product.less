@@ -6,6 +6,14 @@ body.catalog-product-view {
 	.nav-sections {@media (min-width: 768px) {margin-bottom: 0.6rem !important;}}
 	.product.media {margin: 0;}
 	.product-info-main {
+		> .product-social-links {
+			font-size: 1.3rem; margin: 0;
+			a {letter-spacing: initial !important; margin: 0;}
+		}
+		// 2021-01-09
+		// 1) Now it is used on only for desktops, but for mobile screens too.
+		// 2) "The «Add to Basket» button should be visible on the frontend mobile product view without the need to scroll it":
+		// https://github.com/tradefurniturecompany/site/issues/213
 		> .desktop-sticky-bar {
 			> #imegamedia-holder > #imega-widget-anchor {margin: 0; padding: 0;}
 			> .page-title-wrapper {
@@ -78,10 +86,6 @@ body.catalog-product-view {
 					}
 				}
 			}
-		}
-		> .product-social-links {
-			font-size: 1.3rem; margin: 0;
-			a {letter-spacing: initial !important; margin: 0;}
 		}
 	}
 }
