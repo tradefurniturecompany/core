@@ -7,6 +7,7 @@ body.catalog-product-view {
 	.product.media {margin: 0;}
 	.product-info-main {
 		> .desktop-sticky-bar {
+			> #imegamedia-holder > #imega-widget-anchor {margin: 0; padding: 0;}
 			> .page-title-wrapper {
 				// 2020-12-30
 				// The product title seems to be slightly shifted to the right just because of a larger font size
@@ -31,7 +32,8 @@ body.catalog-product-view {
 				> .sku > .type {text-transform: lowercase;}
 			}
 			> .product-add-form {
-				margin: 0; padding: 0;
+				margin: 0;
+				padding: 0;
 				> form {
 					// 2021-01-08 The `.product-options-bottom` wrapper is added for products with options.
 					> .product-options-bottom {&, & > .box-tocart {display: initial;}}
@@ -77,7 +79,6 @@ body.catalog-product-view {
 				}
 			}
 		}
-		> #imegamedia-holder > #imega-widget-anchor {margin: 0; padding: 0;}
 		> .product-social-links {
 			font-size: 1.3rem; margin: 0;
 			a {letter-spacing: initial !important; margin: 0;}
