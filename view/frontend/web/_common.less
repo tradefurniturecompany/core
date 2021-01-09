@@ -1,12 +1,13 @@
 // 2020-05-18
 .breadcrumbs {margin-bottom: 0 !important;}
-@media only screen and (max-width: 767px) {
-	.footer.content {
-		padding-top: 0;
-		h2 {font-size: 2rem; margin: 1.5rem 0;}
-	}
-}
 #maincontent {
 	@media (max-width: 639px) {padding: 0;}
 	> .columns > .main {padding-bottom: 0;}
+}
+footer.page-footer {
+	margin: 0; padding: 0;
+	> .footer.content {
+		padding-top: 0;
+		@media only screen and (max-width: 767px) {h2 {font-size: 2rem; margin: 1.5rem 0;}}
+	}
 }
