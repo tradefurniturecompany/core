@@ -6,9 +6,14 @@ body.catalog-product-view {
 	// and `.breadcrumbs` should have a free space at the top too.
 	.nav-sections {@media (min-width: 768px) {margin-bottom: 0.6rem !important;}}
 	.product.media {margin: 0;}
+	.collapsibleContainer {
+		> .collapsibleTab {padding-bottom: 0;}
+		> .collapsibleContent {padding: 0;}
+	}
+	.collapsibleTab {}
 	.product-info-main {
 		> .product-social-links {
-			font-size: 1.3rem; margin: 0;
+			font-size: 1.3rem; margin: 0; text-align: left;
 			a {letter-spacing: initial !important; margin: 0;}
 		}
 		// 2021-01-09
