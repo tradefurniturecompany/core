@@ -1,5 +1,6 @@
 // 2020-10-23 «Improve the frontend product page»: https://github.com/tradefurniturecompany/site/issues/191
 body.catalog-product-view {
+	color: #575757;
 	// 2020-12-30
 	// I adjust `.nav-sections` because the page could have `.breadcrumbs` which lies above #maincontent,
 	// and `.breadcrumbs` should have a free space at the top too.
@@ -15,7 +16,8 @@ body.catalog-product-view {
 		// 2) "The «Add to Basket» button should be visible on the frontend mobile product view without the need to scroll it":
 		// https://github.com/tradefurniturecompany/site/issues/213
 		> .desktop-sticky-bar {
-			> #imegamedia-holder > #imega-widget-anchor {margin: 0; padding: 0;}
+			display: flex;
+			flex-direction: column;
 			> .page-title-wrapper {
 				// 2020-12-30
 				// The product title seems to be slightly shifted to the right just because of a larger font size
@@ -27,10 +29,22 @@ body.catalog-product-view {
 				}
 			}
 			> .product-info-price {
-				border: 0; margin-bottom: 0;
+				align-items: center;
+				border: 0;
+				display: flex;
+				margin-bottom: 0;
 				> .price-box {
-					padding-bottom: 0;
+					margin-right: 1rem;
+					padding-bottom: 0; width: auto;
 					.price-container > span {margin-bottom: 0;}
+				}
+				> #imegamedia-holder > #imega-widget-anchor {
+					display: flex; flex-direction: row-reverse; line-height: 1.42857143; margin: 0 !important; padding: 0;
+					> * {float: none;}
+					> .imega-anchor-bottom {
+						margin-right: 0.33rem;
+						span.imega-min-payment-text {color: #575757;}
+					}
 				}
 			}
 			> .product-info-stock-sku {
@@ -44,10 +58,10 @@ body.catalog-product-view {
 				padding: 0;
 				> form {
 					// 2021-01-08 The `.product-options-bottom` wrapper is added for products with options.
-					> .product-options-bottom {&, & > .box-tocart {display: initial;}}
+					> .product-options-bottom {display: initial;}
 					&, & > .product-options-bottom {
 						> .box-tocart {
-							margin: 0;
+							display: initial; margin: 0;
 							> .fieldset {
 								align-items: center;
 								display: flex;
