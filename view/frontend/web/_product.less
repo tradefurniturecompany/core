@@ -10,7 +10,19 @@ body.catalog-product-view {
 		> .collapsibleTab {padding-bottom: 0;}
 		> .collapsibleContent {padding: 0;}
 	}
-	.collapsibleTab {}
+	.alternate-links-wrapper {
+		margin: 0;
+		> .alternate-links-col1 > .also-available {
+			margin: 0;
+			> h3 {margin: 1rem 0 0 0;}
+		}
+		> .alternate-links-col2 > .view-all {
+			margin: 0 0 1rem 0;
+			> a {
+				@media (max-width: 639px) {font-size: 14px; height: auto; padding: 6px 0;}
+			}
+		}
+	}
 	.product-info-main {
 		> .product-social-links {
 			font-size: 1.3rem; margin: 0; text-align: left;
@@ -82,13 +94,13 @@ body.catalog-product-view {
 									> span::before {content: '\e611'; font-family: 'icomoon4'; margin-right: 5px;}
 								}
 								> .qty {
-									align-items: center;
 									display: flex;
-									justify-content: space-between;
-									margin: 0 20px 0 0;
+									justify-content: left;
+									margin: 0 0.5rem 0 0;
 									padding: 0;
-									width: 100px;
-									> .label {margin: 0 5px 0 0;}
+									width: auto;
+									> .label {margin: 0 0.5rem 0 0;}
+									> .control > input {width: 2.5em;}
 								}
 							}
 						}
