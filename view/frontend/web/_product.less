@@ -82,6 +82,7 @@ body.catalog-product-view {
 				margin: 0;
 				padding: 0;
 				> form {
+					display: flex;
 					// 2021-01-08 The `.product-options-bottom` wrapper is added for products with options.
 					> .product-options-bottom {display: initial;}
 					&, & > .product-options-bottom {
@@ -119,6 +120,7 @@ body.catalog-product-view {
 							margin: 0;
 							> .field {
 								&:last-of-type {margin-bottom: 0;}
+								&.required > .label:after {margin: 0;}
 								> .label {margin-bottom: 0;}
 							}
 						}
