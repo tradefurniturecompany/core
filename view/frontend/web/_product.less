@@ -5,10 +5,18 @@ body.catalog-product-view {
 	// I adjust `.nav-sections` because the page could have `.breadcrumbs` which lies above #maincontent,
 	// and `.breadcrumbs` should have a free space at the top too.
 	.nav-sections {@media (min-width: 768px) {margin-bottom: 0.6rem !important;}}
+	// 2021-01-10
+	// 1) @todo I would nice to have a bottom margin in the wide-screen mode for products like
+	// https://www.tradefurniturecompany.co.uk/wall-units-h720mm
+	// which have a big primary image and do not have other images nor the «Also available in» block.
+	// 2) But such margin is redundant for the small-screen mode,
+	// and for products like https://www.tradefurniturecompany.co.uk/dakota-open-bookcase
 	.product.media {margin: 0;}
-	.collapsibleContainer {
-		> .collapsibleTab {padding-bottom: 0;}
-		> .collapsibleContent {padding: 0;}
+	.accordion-image-wrapper {
+		.collapsibleContainer {
+			> .collapsibleTab {padding-bottom: 0;}
+			> .collapsibleContent {padding: 0;}
+		}
 	}
 	.alternate-links-wrapper {
 		margin: 0;
