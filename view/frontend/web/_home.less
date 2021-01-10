@@ -6,16 +6,19 @@ body.cms-home {
 	.tfc-welcome p {text-align: center;}
 	.owl-stage-outer {padding: 0;}
 	.column.main {
-		> p {display: none; margin: 0;} // 2020-05-15 They are empty <p></p> tags.
-		> .widget {
+		p:empty {display: none; margin: 0;}
+		// 2021-01-10
+		// I intentionally apply this rule not only to `> .widget`, but to `> .fixed-width-content > .widget` too.
+		.widget {
 			margin-bottom: 0;
-			> .custom-slider {padding-bottom: 0;}
+			> .block {margin-bottom: 0;}
 		}
+		> .widget > .custom-slider {padding-bottom: 0;}
+		.tfc-welcome {margin-top: 1em;}
 		@media (max-width: 767px) {
 			// 2020-05-15 https://stackoverflow.com/a/18672728
 			> .fixed-width-content > .widget:nth-of-type(-n+2) {margin-bottom: 0;}
 			.tfc-welcome {
-				margin-top: 1em;
 				> .tfc-contents {margin-bottom: 0.5em;}
 				.tfc-toggle-m();
 			}
