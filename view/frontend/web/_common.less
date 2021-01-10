@@ -1,5 +1,10 @@
 // 2020-05-18
 .breadcrumbs {margin-bottom: 0 !important;}
+p {
+	&:empty {display: none; margin: 0;}
+	&:last-of-type {margin-bottom: 0;}
+	> br:first-child {display: none;}
+}
 #maincontent {
 	@media (max-width: 639px) {padding: 0;}
 	> .columns > .main {padding-bottom: 0;}
