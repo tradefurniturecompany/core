@@ -10,6 +10,19 @@
 			type='TFC\Core\Plugin\Catalog\Block\Product\View\GalleryOptions'
 		/>
 	</type>
+<!-- 2021-05-11 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+"Redirect frontend product requests to canonical URLs (without a category path included)":
+https://github.com/tradefurniturecompany/core/issues/40 -->
+	<type name='Magento\Framework\App\RouterList'>
+		<arguments>
+			<argument name='routerList' xsi:type='array'>
+				<item name='TFC\Core\Router' xsi:type='array'>
+					<item name='class' xsi:type='string'>TFC\Core\Router</item>
+					<item name='sortOrder' xsi:type='string'>19</item>
+				</item>
+			</argument>
+		</arguments>
+	</type>
 <!-- 2020-10-28
 1) "Remove «Home» from breadcrumbs on frontend product pages": https://github.com/tradefurniturecompany/site/issues/199
 2) "Remove the product name from breadcrumbs on frontend product pages":
