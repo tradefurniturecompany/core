@@ -17,19 +17,13 @@ class Router implements IRouter {
 	 * @param IRequest $req
 	 * @return Redirect|null
 	 */
-	function match(IRequest $req) {
-		$r = null; /** @var Redirect|null $r */
-		if (
-			($rew = df_url_finder()->findOneByData([
-				Rewrite::REQUEST_PATH => df_trim_ds_left($req->getPathInfo()), Rewrite::STORE_ID => df_store_id(),
-			])) /** @var Rewrite|null $rew */
-			&& 'product' === $rew->getEntityType()
-			&& 1 < count($parts = df_explode_url($rew->getRequestPath()))
-		) {
-			df_response()->setRedirect(df_url_frontend(df_last($parts)), 301);
-			$req->setDispatched(true);
-			$r = df_action_c_redirect();
-		}
-		return $r;
-	}
+	function match(IRequest $req) {return
+		($rew = df_url_finder()->findOneByData([
+			Rewrite::REQUEST_PATH => df_trim_ds_left($req->getPathInfo()), Rewrite::STORE_ID => df_store_id(),
+		])) /** @var Rewrite|null $rew */
+		&& 'product' === $rew->getEntityType()
+		&& 1 < count($parts = df_explode_url($rew->getRequestPath()))
+		? df_router_redirect($req, df_last($parts))
+		: null
+	;}
 }
