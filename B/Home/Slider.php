@@ -2,7 +2,7 @@
 namespace TFC\Core\B\Home;
 use Magento\Framework\View\Element\Template as _P;
 // 2020-01-18
-class Slick extends _P {
+class Slider extends _P {
 	/**
 	 * 2020-01-18
 	 * @override
@@ -15,11 +15,11 @@ class Slick extends _P {
 	 * @used-by \Magento\Framework\View\Element\Template::getTemplateFile()
 	 * @return string
 	 */
-    function getTemplate() {return 'TFC_Core::home/slick.phtml';}
+    function getTemplate() {return 'TFC_Core::home/slider.phtml';}
 
 	/**               
 	 * 2020-03-18
-	 * @used-by vendor/tradefurniturecompany/core/view/frontend/templates/home/slick.phtml
+	 * @used-by vendor/tradefurniturecompany/core/view/frontend/templates/home/slider.phtml
 	 * @param string $page
 	 * @param string $img
 	 * @param int $w [optional]
@@ -31,7 +31,7 @@ class Slick extends _P {
 		['href' => df_url("more-collections/$page")]
 		,df_tag('img', df_clean([
 			'alt' => $alt
-			,'data-lazy' => df_media_path2url("wysiwyg/furniture_links/$img.jpg")
+			,'data-lazy' => df_asset_url("TFC_Core::i/home/slider/$img.jpg")
 			,'height' => $h
 			,'width' => $w
 		], 0))
