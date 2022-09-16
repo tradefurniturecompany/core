@@ -4,7 +4,7 @@
 define([], function() {return (
 	/**
 	 * @param {Object} cfg
-	 * @param {Number} cfg.amount
+	 * @param {String} cfg.amount
 	 * @param {String} cfg.email
 	 * @param {String} cfg.id
 	 */

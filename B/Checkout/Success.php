@@ -36,7 +36,7 @@ class Success extends _P {
 		# https://github.com/JustunoCom/m2/blob/1.7.7/Block/Js.php#L39-L51
 		$o = df_order_last(); /** @var O $o */
 		return df_js(__CLASS__, 'checkout/success', [
-			'amount' => $o->getGrandTotal(), 'email' => $o->getCustomerEmail(), 'id' => $o->getIncrementId()
+			'amount' => dff_2($o->getGrandTotal()), 'email' => $o->getCustomerEmail(), 'id' => $o->getIncrementId()
 		]);
 	}
 }
