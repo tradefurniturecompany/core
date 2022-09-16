@@ -4,15 +4,16 @@
 define([], function() {return (
 	/**
 	 * @param {Object} cfg
+	 * @param {Number} cfg.amount
+	 * @param {String} cfg.email
+	 * @param {String} cfg.id
 	 */
 	function(cfg) {
 		window.dataLayer.push({
-			'event':'ec_purchase',
-			'order_value':'',
-			'order_id':'',
-			'enhanced_conversion_data': {
-				"email": 'yourEmailVariable',
-			}
+			'enhanced_conversion_data': {'email': cfg.email}
+			,'event':'ec_purchase'
+			,'order_id': cfg.id
+			,'order_value': cfg.amount
 		})
 	});
 });
