@@ -1,8 +1,9 @@
 <?php
 namespace TFC\Core\B\Home;
 use Magento\Framework\View\Element\Template as _P;
-// 2020-01-18
-class Slider extends _P {
+use Magento\Framework\ObjectManager\NoninterceptableInterface as INonInterceptable;
+# 2020-01-18
+final class Slider extends _P implements INonInterceptable {
 	/**
 	 * 2020-01-18
 	 * @override
@@ -18,14 +19,22 @@ class Slider extends _P {
     function getTemplate() {return 'TFC_Core::home/slider.phtml';}
 
 	/**
-	 * 2020-03-18
+	 * 2022-11-09
 	 * @used-by vendor/tradefurniturecompany/core/view/frontend/templates/home/slider.phtml
+	 * @param array(string|string[]) $a
+	 */
+    function p():string {return df_cc_n(df_map(array_chunk(df_module_json($this, 'slider'), 2), function(array $c):string {return
+		df_tag('div', 'furniture-link', df_cc_n(df_map($c, function($i):string {return $this->i(...df_array($i));})))
+	;}));}
+
+	/**
+	 * 2020-03-18
+	 * @used-by self::p()
 	 * @param string $n
 	 * @param string $u [optional]
-	 * @return string
 	 */
-    function i($n, $u = '') {
-		$f = function($s) use($n) {return strtolower(str_replace(' ', $s, $n));};
+    private function i($n, $u = ''):string {
+		$f = function($s) use($n):string {return strtolower(str_replace(' ', $s, $n));};
 		$i = $f('_'); /** @var string $i */
 		$u = $u ?: $f('-');
 		return df_cc_n(
