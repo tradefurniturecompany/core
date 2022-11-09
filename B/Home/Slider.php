@@ -17,23 +17,22 @@ class Slider extends _P {
 	 */
     function getTemplate() {return 'TFC_Core::home/slider.phtml';}
 
-	/**               
+	/**
 	 * 2020-03-18
 	 * @used-by vendor/tradefurniturecompany/core/view/frontend/templates/home/slider.phtml
-	 * @param string $page
-	 * @param string $img
-	 * @param int $w [optional]
-	 * @param int $h [optional]
-	 * @param string $alt [optional]
+	 * @param string $n
+	 * @param string $u [optional]
 	 * @return string
 	 */
-    function i($page, $img, $w = 0, $h = 0, $alt = '') {return df_tag('a',
-		['href' => df_url("more-collections/$page")]
-		,df_tag('img', df_clean([
-			'alt' => $alt
-			,'data-lazy' => df_asset_url("TFC_Core::i/home/slider/$img.jpg")
-			,'height' => $h
-			,'width' => $w
-		], 0))
-	);}
+    function i($n, $u = '') {
+		$f = function($s) use($n) {return strtolower(str_replace(' ', $s, $n));};
+		$i = $f('_'); /** @var string $i */
+		$u = $u ?: $f('-');
+		return df_cc_n(
+			df_tag('a', ['href' => df_url("more-collections/$u")], df_tag('img', [
+				'alt' => $n, 'data-lazy' => df_asset_url("TFC_Core::i/home/slider/$i.jpg")
+			]))
+			,df_tag('p', 'heading', $n)
+		);
+	}
 }
