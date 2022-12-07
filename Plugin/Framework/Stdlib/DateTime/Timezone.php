@@ -2,12 +2,10 @@
 namespace TFC\Core\Plugin\Framework\Stdlib\DateTime;
 use Magento\Framework\App\ScopeInterface as IScope;
 use Magento\Framework\Stdlib\DateTime\Timezone as Sb;
-/**
- * 2019-10-07
- * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
- * "Transfer the `\Magento\Framework\Stdlib\DateTime\Timezone::isScopeDateInInterval()` method modification
- * to the `tradefurniturecompany/core` module": https://github.com/tradefurniturecompany/core/issues/13
- */
+# 2019-10-07
+# "Transfer the `\Magento\Framework\Stdlib\DateTime\Timezone::isScopeDateInInterval()` method modification
+# to the `tradefurniturecompany/core` module": https://github.com/tradefurniturecompany/core/issues/13
+/** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Timezone extends Sb {
 	/** 2019-10-07 */
 	function __construct() {}
