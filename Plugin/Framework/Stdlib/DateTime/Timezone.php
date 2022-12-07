@@ -20,8 +20,6 @@ class Timezone extends Sb {
 	 */
 	function aroundIsScopeDateInInterval(Sb $sb, \Closure $f, $s, $dateFrom = null, $dateTo = null):bool {
 		$tScope = $sb->scopeTimeStamp($s instanceof IScope ? $s : $sb->_scopeResolver->getScope($s)); /** @var int $tScope */
-		$tFrom = strtotime($dateFrom); /** @var int $tFrom */
-		$tTo = strtotime($dateTo); /** @var int $tTo */
 		# 2019-10-07
 		# Here is my modification.
 		# I have removed the following code:
@@ -36,9 +34,7 @@ class Timezone extends Sb {
 		# they just add an extra day to the special promotion end date ($tTo += 86400;).
 		# I have fixed it now.»
 		# https://www.upwork.com/messages/rooms/room_8e141f0c39ea3e5091cd334db37aaef0/story_8b1ee9633f632773f154d3cb81416f95
-		return
-			($tScope >= $tFrom || $sb->_dateTime->isEmptyDate($dateFrom))
-			&& ($tScope <= $tTo || $sb->_dateTime->isEmptyDate($dateTo))
-		;
+		$e = function($d) use ($sb):bool {return $sb->_dateTime->isEmptyDate($d);};
+		return ($e($dateFrom) || $tScope >= strtotime($dateFrom)) && ($e($dateTo) || $tScope <= strtotime($dateTo));
 	}
 }
