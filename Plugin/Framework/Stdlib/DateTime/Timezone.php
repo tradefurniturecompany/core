@@ -34,7 +34,9 @@ class Timezone extends Sb {
 		# they just add an extra day to the special promotion end date ($tTo += 86400;).
 		# I have fixed it now.»
 		# https://www.upwork.com/messages/rooms/room_8e141f0c39ea3e5091cd334db37aaef0/story_8b1ee9633f632773f154d3cb81416f95
-		$e = function($d) use ($sb):bool {return $sb->_dateTime->isEmptyDate($d);};
-		return ($e($dateFrom) || $tScope >= strtotime($dateFrom)) && ($e($dateTo) || $tScope <= strtotime($dateTo));
+		$cmp = function(int $t, $d, bool $ge) use($sb):bool {return
+			$sb->_dateTime->isEmptyDate($d) || ($ge ? $t >= strtotime($d) : $t <= strtotime($d))
+		;};
+		return $cmp($tScope, $dateFrom, true) && $cmp($tScope, $dateTo, false);
 	}
 }
