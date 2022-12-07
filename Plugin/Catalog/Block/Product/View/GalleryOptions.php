@@ -15,7 +15,7 @@ final class GalleryOptions {
 		$gc = $g->getGalleryImages(); /** @var C $gc */
 		if ($gc->count()) {
 			/** @var _DO $i */
-			if (!($i = df_find($gc, function(_DO $i) use($g) {return $g->isMainImage($i);}))) {
+			if (!($i = df_find($gc, function(_DO $i) use($g):bool {return $g->isMainImage($i);}))) {
 				$i = $gc->getFirstItem();
 			}
 			try {
