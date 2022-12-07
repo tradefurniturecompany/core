@@ -17,9 +17,8 @@ class Timezone extends Sb {
 	 * @param int|string|IScope $scope
 	 * @param string|null $dateFrom [optional]
 	 * @param string|null $dateTo [optional]
-	 * @return bool
 	 */
-	function aroundIsScopeDateInInterval(Sb $sb, \Closure $f, $scope, $dateFrom = null, $dateTo = null) {
+	function aroundIsScopeDateInInterval(Sb $sb, \Closure $f, $scope, $dateFrom = null, $dateTo = null):bool {
 		if (!$scope instanceof IScope) {
 			$scope = $sb->_scopeResolver->getScope($scope);
 		}
