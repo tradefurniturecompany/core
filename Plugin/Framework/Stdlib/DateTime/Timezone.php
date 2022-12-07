@@ -40,8 +40,8 @@ class Timezone extends Sb {
 		# I have fixed it now.»
 		# https://www.upwork.com/messages/rooms/room_8e141f0c39ea3e5091cd334db37aaef0/story_8b1ee9633f632773f154d3cb81416f95
 		return
-			($sb->_dateTime->isEmptyDate($dateFrom) || $tScope >= $tFrom)
-			&& ($sb->_dateTime->isEmptyDate($dateTo) || $tScope <= $tTo)
+			($tScope >= $tFrom || $sb->_dateTime->isEmptyDate($dateFrom))
+			&& ($tScope <= $tTo || $sb->_dateTime->isEmptyDate($dateTo))
 		;
 	}
 }
