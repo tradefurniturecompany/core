@@ -2,7 +2,7 @@
 namespace TFC\Core\B\Home;
 use Magento\Framework\View\Element\Template as _P;
 use Magento\Framework\ObjectManager\NoninterceptableInterface as INonInterceptable;
-# 2020-01-18
+# 2020-01-18, 2022-11-09
 final class Slider extends _P implements INonInterceptable {
 	/**
 	 * 2020-01-18
