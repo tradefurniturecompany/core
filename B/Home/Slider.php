@@ -14,9 +14,8 @@ final class Slider extends _P implements INonInterceptable {
 	 * @used-by \Magento\Framework\View\Element\Template::fetchView()
 	 * @used-by \Magento\Framework\View\Element\Template::getCacheKeyInfo()
 	 * @used-by \Magento\Framework\View\Element\Template::getTemplateFile()
-	 * @return string
 	 */
-    function getTemplate() {return 'TFC_Core::home/slider.phtml';}
+    function getTemplate():string {return 'TFC_Core::home/slider.phtml';}
 
 	/**
 	 * 2022-11-09
