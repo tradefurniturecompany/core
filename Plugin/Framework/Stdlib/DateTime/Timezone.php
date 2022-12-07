@@ -23,8 +23,8 @@ class Timezone extends Sb {
 			$scope = $sb->_scopeResolver->getScope($scope);
 		}
 		$tScope = $sb->scopeTimeStamp($scope);
-		$tFrom = strtotime($dateFrom);
-		$tTo = strtotime($dateTo);
+		$tFrom = strtotime($dateFrom); /** @var int $tFrom */
+		$tTo = strtotime($dateTo); /** @var int $tTo */
 		# 2019-10-07
 		# Here is my modification.
 		# I have removed the following code:
