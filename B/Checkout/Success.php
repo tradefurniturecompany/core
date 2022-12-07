@@ -26,9 +26,8 @@ class Success extends _P {
 	 *		}
 	 *		$html = $this->_afterToHtml($html);
 	 * https://github.com/magento/magento2/blob/2.2.0/lib/internal/Magento/Framework/View/Element/AbstractBlock.php#L643-L689
-	 * @return string
 	 */
-	final protected function _toHtml() {
+	final protected function _toHtml():string {
 		# 2022-09-16
 		# I have already impemented a similar task before in the Justuno project:
 		# https://github.com/JustunoCom/m2/blob/1.7.7/Block/Js.php#L39-L51
