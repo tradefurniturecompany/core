@@ -16,7 +16,6 @@ class Welcome extends _P {
 	 * @used-by \Magento\Framework\View\Element\Template::fetchView()
 	 * @used-by \Magento\Framework\View\Element\Template::getCacheKeyInfo()
 	 * @used-by \Magento\Framework\View\Element\Template::getTemplateFile()
-	 * @return string
 	 */
-    function getTemplate() {return 'TFC_Core::home/welcome.phtml';}
+    function getTemplate():string {return 'TFC_Core::home/welcome.phtml';}
 }
