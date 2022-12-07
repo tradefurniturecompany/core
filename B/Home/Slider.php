@@ -29,10 +29,8 @@ final class Slider extends _P implements INonInterceptable {
 	/**
 	 * 2020-03-18
 	 * @used-by self::p()
-	 * @param string $n
-	 * @param string $u [optional]
 	 */
-    private function i($n, $u = ''):string {
+    private function i(string $n, string $u = ''):string {
 		$f = function($s) use($n):string {return strtolower(str_replace(' ', $s, $n));};
 		$i = $f('_'); /** @var string $i */
 		$u = $u ?: $f('-');
