@@ -9,9 +9,8 @@ final class GalleryOptions {
 	/**
 	 * 2020-10-28
 	 * @see \Magento\Catalog\Block\Product\View\GalleryOptions::getOptionsJson()
-	 * @return string
 	 */
-	function afterGetOptionsJson(Sb $sb, string $r) {
+	function afterGetOptionsJson(Sb $sb, string $r):string {
 		$g = df_product_gallery_b(); /** @var G $g */
 		$gc = $g->getGalleryImages(); /** @var C $gc */
 		if ($gc->count()) {
