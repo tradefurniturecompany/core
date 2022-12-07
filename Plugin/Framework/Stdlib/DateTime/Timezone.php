@@ -25,22 +25,20 @@ class Timezone extends Sb {
 		$scopeTimeStamp = $sb->scopeTimeStamp($scope);
 		$fromTimeStamp = strtotime($dateFrom);
 		$toTimeStamp = strtotime($dateTo);
-		/**
-		 * 2019-10-07
-		 * Here is my modification.
-		 * I have removed the following code:
-		 *		if ($dateTo) {
-		 *			$toTimeStamp += 86400;
-		 *		}
-		 * https://github.com/magento/magento2/blob/2.2.6/lib/internal/Magento/Framework/Stdlib/DateTime/Timezone.php#L275-L278
-			 * «I have analysed and fixed the issue.
-			 * It was caused by a totally unexpected buggy behaviour of your outdated Magento version (2.2.6).
-			 * Magento developers tried to fix issues of various dates formatting in different locales
-			 * and did it in a straightforward and incorect way:
-			 * they just add an extra day to the special promotion end date ($toTimeStamp += 86400;).
-			 * I have fixed it now.»
-			 * https://www.upwork.com/messages/rooms/room_8e141f0c39ea3e5091cd334db37aaef0/story_8b1ee9633f632773f154d3cb81416f95
-		 */
+		# 2019-10-07
+		# Here is my modification.
+		# I have removed the following code:
+		#		if ($dateTo) {
+		#			$toTimeStamp += 86400;
+		#		}
+		# https://github.com/magento/magento2/blob/2.2.6/lib/internal/Magento/Framework/Stdlib/DateTime/Timezone.php#L275-L278
+		# «I have analysed and fixed the issue.
+		# It was caused by a totally unexpected buggy behaviour of your outdated Magento version (2.2.6).
+		# Magento developers tried to fix issues of various dates formatting in different locales
+		# and did it in a straightforward and incorect way:
+		# they just add an extra day to the special promotion end date ($toTimeStamp += 86400;).
+		# I have fixed it now.»
+		# https://www.upwork.com/messages/rooms/room_8e141f0c39ea3e5091cd334db37aaef0/story_8b1ee9633f632773f154d3cb81416f95
 		$result = false;
 		if (!$sb->_dateTime->isEmptyDate($dateFrom) && $scopeTimeStamp < $fromTimeStamp) {}
 		elseif (!$sb->_dateTime->isEmptyDate($dateTo) && $scopeTimeStamp > $toTimeStamp) {}
