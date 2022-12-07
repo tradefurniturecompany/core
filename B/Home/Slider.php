@@ -31,7 +31,7 @@ final class Slider extends _P implements INonInterceptable {
 	 * @used-by self::p()
 	 */
     private function i(string $n, string $u = ''):string {
-		$f = function($s) use($n):string {return strtolower(str_replace(' ', $s, $n));};
+		$f = function(string $s) use($n):string {return strtolower(str_replace(' ', $s, $n));};
 		$i = $f('_'); /** @var string $i */
 		$u = $u ?: $f('-');
 		return df_cc_n(
