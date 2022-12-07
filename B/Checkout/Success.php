@@ -29,7 +29,7 @@ class Success extends _P {
 	 */
 	final protected function _toHtml():string {
 		# 2022-09-16
-		# I have already impemented a similar task before in the Justuno project:
+		# I have already impemented a similar task in the Justuno project:
 		# https://github.com/JustunoCom/m2/blob/1.7.7/Block/Js.php#L39-L51
 		$o = df_order_last(); /** @var O $o */
 		return df_js(__CLASS__, 'checkout/success', [
