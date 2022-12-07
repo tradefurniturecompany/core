@@ -14,8 +14,6 @@ class Timezone extends Sb {
 	 * 2019-10-07
 	 * @see \Magento\Framework\Stdlib\DateTime\Timezone::isScopeDateInInterval()
 	 * @see \Magento\Framework\Stdlib\DateTime\TimezoneInterface::isScopeDateInInterval()
-	 * @param Sb $sb
-	 * @param \Closure $f
 	 * @param int|string|IScope $scope
 	 * @param string|null $dateFrom [optional]
 	 * @param string|null $dateTo [optional]
