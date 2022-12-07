@@ -22,7 +22,7 @@ class Timezone extends Sb {
 		if (!$scope instanceof IScope) {
 			$scope = $sb->_scopeResolver->getScope($scope);
 		}
-		$tScope = $sb->scopeTimeStamp($scope);
+		$tScope = $sb->scopeTimeStamp($scope); /** @var int $tScope */
 		$tFrom = strtotime($dateFrom); /** @var int $tFrom */
 		$tTo = strtotime($dateTo); /** @var int $tTo */
 		# 2019-10-07
