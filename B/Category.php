@@ -1,12 +1,10 @@
 <?php
 namespace TFC\Core\B;
 use Magento\Framework\View\Element\AbstractBlock as _P;
-/**
- * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
- * 2020-05-15 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
- * "Hide the text below the primary image from the «Collections» (`/more-collections`) page on narrow screens":
- * https://github.com/tradefurniturecompany/core/issues/30
- */
+# 2020-05-15
+# "Hide the text below the primary image from the «Collections» (`/more-collections`) page on narrow screens":
+# https://github.com/tradefurniturecompany/core/issues/30
+/** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Category extends _P {
 	/**
 	 * 2020-05-15
