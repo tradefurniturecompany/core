@@ -14,15 +14,12 @@ class Timezone extends Sb {
 	 * 2019-10-07
 	 * @see \Magento\Framework\Stdlib\DateTime\Timezone::isScopeDateInInterval()
 	 * @see \Magento\Framework\Stdlib\DateTime\TimezoneInterface::isScopeDateInInterval()
-	 * @param int|string|IScope $scope
+	 * @param int|string|IScope $s
 	 * @param string|null $dateFrom [optional]
 	 * @param string|null $dateTo [optional]
 	 */
-	function aroundIsScopeDateInInterval(Sb $sb, \Closure $f, $scope, $dateFrom = null, $dateTo = null):bool {
-		if (!$scope instanceof IScope) {
-			$scope = $sb->_scopeResolver->getScope($scope);
-		}
-		$tScope = $sb->scopeTimeStamp($scope); /** @var int $tScope */
+	function aroundIsScopeDateInInterval(Sb $sb, \Closure $f, $s, $dateFrom = null, $dateTo = null):bool {
+		$tScope = $sb->scopeTimeStamp($s instanceof IScope ? $s : $sb->_scopeResolver->getScope($s)); /** @var int $tScope */
 		$tFrom = strtotime($dateFrom); /** @var int $tFrom */
 		$tTo = strtotime($dateTo); /** @var int $tTo */
 		# 2019-10-07
