@@ -1,9 +1,9 @@
 <?php
 namespace TFC\Core\B\Home;
 use Magento\Framework\View\Element\Template as _P;
-// 2020-05-14
-// "Hide the text between sliders into a collapsible box on narrow screens":
-// https://github.com/tradefurniturecompany/core/issues/29
+# 2020-05-14
+# "Hide the text between sliders into a collapsible box on narrow screens":
+# https://github.com/tradefurniturecompany/core/issues/29
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Welcome extends _P {
 	/**

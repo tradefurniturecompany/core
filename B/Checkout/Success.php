@@ -2,10 +2,10 @@
 namespace TFC\Core\B\Checkout;
 use Magento\Framework\View\Element\AbstractBlock as _P;
 use Magento\Sales\Model\Order as O;
-/** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 # 2022-09-16
 # "Add a Google Tag Manager code to the `checkout/onepage/success` page":
 # https://github.com/tradefurniturecompany/core/issues/42
+/** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Success extends _P {
 	/**
 	 * 2022-09-16
