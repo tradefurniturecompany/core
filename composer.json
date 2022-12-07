@@ -11,7 +11,7 @@
 		,"homepage": "https://www.upwork.com/fl/mage2pro"
 		,"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": "<8.1.0"}
+	,"require": {"mage2pro/core": ">=9.0.0"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"TFC\\Core\\": ""}}
 	,"keywords": ["Magento 2"]
 }
