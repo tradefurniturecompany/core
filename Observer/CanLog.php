@@ -17,9 +17,8 @@ final class CanLog implements ObserverInterface {
 	 * @override
 	 * @see ObserverInterface::execute()
 	 * @used-by \Magento\Framework\Event\Invoker\InvokerDefault::_callObserverMethod()
-	 * @param Observer $ob
 	 */
-	function execute(Observer $ob) {
+	function execute(Observer $ob):void {
 		$m = $ob[D::P_MESSAGE]; /** @var array(string => mixed) $m */
 		$ob[D::P_RESULT][D::V_SKIP] = df_contains(dfa($m, 'message'), [
 			# 2020-08-30
