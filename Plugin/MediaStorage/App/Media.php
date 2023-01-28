@@ -9,9 +9,8 @@ final class Media {
 	 * 2020-12-13
 	 * @see \Magento\MediaStorage\App\Media::launch()
 	 * @used-by \Magento\Framework\App\Bootstrap::run()
-	 * @return Response
 	 */
-	function aroundLaunch(Sb $sb, \Closure $f) {
+	function aroundLaunch(Sb $sb, \Closure $f):Response {
 		$uriWithoutMedia = df_strip_media_from_request_uri(); /** @var string $uriWithoutMedia */
 		$pathWeltPixel = 'weltpixel/owlcarouselslider/images/'; /** @var string $pathWeltPixel */
 		if (!df_starts_with($uriWithoutMedia, $pathWeltPixel)) {
