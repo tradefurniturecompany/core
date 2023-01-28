@@ -16,8 +16,6 @@ class Config extends Sb {
 	/**
 	 * 2019-10-07
 	 * @see \Magento\Tax\Model\Config::needPriceConversion()
-	 * @param Sb $sb
-	 * @param \Closure $f
 	 * @param null|int|string|Store $s [optional]
 	 * @return bool|int
 	 */
