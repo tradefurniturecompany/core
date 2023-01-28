@@ -19,13 +19,12 @@ class Data extends Sb {
 	 * 2019-10-07
 	 * @see \Magento\Tax\Helper\Data::getShippingPrice()
 	 * @param bool|null $includingTax [optional]
-	 * @param Address|null $sa [optional]
 	 * @param int|null $ctc [optional]
 	 * @param null|string|bool|int|Store $store [optional]
 	 * @return float
 	 */
 	function aroundGetShippingPrice(
-		Sb $sb, \Closure $f, float $price, $includingTax = null, $sa = null, $ctc = null, $store = null
+		Sb $sb, \Closure $f, float $price, $includingTax = null, Address $sa = null, $ctc = null, $store = null
 	) {
 		$pseudoProduct = new \Magento\Framework\DataObject();
 		$pseudoProduct->setTaxClassId($sb->getShippingTaxClass($store));
