@@ -43,7 +43,7 @@ final class Order {
 	 * https://github.com/magento/magento2/blob/2.3.4/app/code/Magento/Sales/CustomerData/LastOrderedItems.php#L129-L150
 	 * @return I[]
 	 */
-	function afterGetParentItemsRandomCollection(Sb $sb, C $r) {return df_filter($r, function(I $i) {return
+	function afterGetParentItemsRandomCollection(Sb $sb, C $r):array {return df_filter($r, function(I $i) {return
 		$i->getProductId()
 	;});}
 }
