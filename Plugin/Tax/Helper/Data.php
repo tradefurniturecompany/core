@@ -18,8 +18,6 @@ class Data extends Sb {
 	/**
 	 * 2019-10-07
 	 * @see \Magento\Tax\Helper\Data::getShippingPrice()
-	 * @param Sb $sb
-	 * @param \Closure $f
 	 * @param float $price
 	 * @param bool|null $includingTax [optional]
 	 * @param Address|null $sa [optional]
