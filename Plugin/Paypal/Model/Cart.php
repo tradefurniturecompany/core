@@ -1,6 +1,5 @@
 <?php
 namespace TFC\Core\Plugin\Paypal\Model;
-use Closure as F;
 use Magento\Paypal\Model\Cart as Sb;
 # 2020-12-24
 # «PayPal gateway has rejected request. The totals of the cart item amounts do not match order amounts»:
@@ -21,7 +20,7 @@ class Cart extends Sb {
 	 * @used-by \Magento\Paypal\Model\Api\AbstractApi::_exportLineItems()
 	 * @return array(string => float)
 	 */
-	function aroundGetAmounts(Sb $sb, F $f):array {
+	function aroundGetAmounts(Sb $sb):array {
 		# 2020-12-24 https://github.com/magento/magento2/blob/2.3.2/app/code/Magento/Paypal/Model/Cart.php#L28
 		$sb->_collectItemsAndAmounts();
 		/** @var array(string => float) $r */
