@@ -57,9 +57,8 @@ class Config extends Sb {
 	 * "The «Delivery and Installation» fee should be shown with taxes":
 	 * https://github.com/tradefurniturecompany/core/issues/3
 	 * @used-by \TFC\Core\Plugin\Tax\Helper\Data::aroundGetShippingPrice()
-	 * @param bool $v
 	 */
-    static function shippingModeSet($v) {self::$_shippingMode = $v;}
+    static function shippingModeSet(bool $v) {self::$_shippingMode = $v;}
 
 	/**
 	 * 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
