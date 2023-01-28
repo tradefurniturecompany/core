@@ -14,7 +14,6 @@ class Router implements IRouter {
 	 * @override
 	 * @see IRouter::match()
 	 * @used-by \Magento\Framework\App\FrontController::dispatch()
-	 * @param IRequest $req
 	 * @return Redirect|null
 	 */
 	function match(IRequest $req) {return
