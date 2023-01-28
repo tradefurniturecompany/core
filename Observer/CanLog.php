@@ -20,7 +20,7 @@ final class CanLog implements ObserverInterface {
 	 */
 	function execute(Observer $ob):void {
 		$m = $ob[D::P_MESSAGE]; /** @var array(string => mixed) $m */
-		$ob[D::P_RESULT][D::V_SKIP] = df_contains(dfa($m, 'message'), [
+		$ob[D::P_RESULT][D::V_SKIP] = df_contains(dfa($m, 'message'),
 			# 2020-08-30
 			# "Prevent Magento from logging the
 			# «PayPal NVP gateway errors: You do not have permissions to make this API call
@@ -30,6 +30,6 @@ final class CanLog implements ObserverInterface {
 			# "Prevent Magento from logging the «Invalid state change requested» message to `exception.log`":
 			# https://github.com/tradefurniturecompany/core/issues/39
 			,'Invalid state change requested'
-		]);
+		);
 	}
 }
