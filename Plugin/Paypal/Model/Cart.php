@@ -19,7 +19,7 @@ class Cart extends Sb {
 	 * 2020-12-24
 	 * @see \Magento\Paypal\Model\Cart::getAmounts()
 	 * @used-by \Magento\Paypal\Model\Api\AbstractApi::_exportLineItems()
-	 * @return array(string => float) $r
+	 * @return array(string => float)
 	 */
 	function aroundGetAmounts(Sb $sb, F $f) {
 		# 2020-12-24 https://github.com/magento/magento2/blob/2.3.2/app/code/Magento/Paypal/Model/Cart.php#L28
