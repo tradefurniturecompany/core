@@ -23,9 +23,9 @@ class Config extends Sb {
 	 */
 	function aroundNeedPriceConversion(Sb $sb, \Closure $f, $s = null) {
 		$res = 0;
-		// 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
-		// "The «Delivery and Installation» fee should be shown with taxes":
-		// https://github.com/tradefurniturecompany/core/issues/3
+		# 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+		# "The «Delivery and Installation» fee should be shown with taxes":
+		# https://github.com/tradefurniturecompany/core/issues/3
 		$priceIncludesTax =
 			(self::$_shippingMode ? $sb->shippingPriceIncludesTax($s) : $sb->priceIncludesTax($s))
 			|| $sb->getNeedUseShippingExcludeTax()
