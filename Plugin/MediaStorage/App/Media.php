@@ -9,8 +9,6 @@ final class Media {
 	 * 2020-12-13
 	 * @see \Magento\MediaStorage\App\Media::launch()
 	 * @used-by \Magento\Framework\App\Bootstrap::run()
-	 * @param Sb $sb
-	 * @param \Closure $f
 	 * @return Response
 	 */
 	function aroundLaunch(Sb $sb, \Closure $f) {
