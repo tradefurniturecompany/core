@@ -15,13 +15,10 @@ final class Breadcrumbs {
 	 *		'title' => __('Go to Home Page'),
 	 *		'link' => $this->_storeManager->getStore()->getBaseUrl()
 	 *	]);
-	 * @param Sb $sb
-	 * @param \Closure $f
-	 * @param string $k
 	 * @param array(string => mixed) $d
 	 * @return Sb
 	 */
-	function aroundAddCrumb(Sb $sb, \Closure $f, $k, array $d) {
+	function aroundAddCrumb(Sb $sb, \Closure $f, string $k, array $d) {
 		if (!in_array($k, ['home', 'product']) || !df_is_catalog_product_view()) {
 			$f($k, $d);
 		}
