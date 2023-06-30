@@ -62,7 +62,14 @@ body.catalog-category-view #maincontent {
 									> .actions-secondary-container {float: right; padding-right: 0.25rem;}
 								}
 								> .name {
-									margin-top: 0; @media (max-width: 639px) {margin-bottom: 0;}
+									// 2023-06-30
+									// 1) "Upgrade Magento 2.3.2 → 2.3.6-p1":
+									// https://github.com/tradefurniturecompany/site/issues/244
+									// 2) Magento 2.3.6 adds a bottom margin.
+									// 3) The previous code was:
+									// 		margin-top: 0; @media (max-width: 639px) {margin-bottom: 0;}
+									// https://github.com/tradefurniturecompany/core/blob/0.5.7/view/frontend/web/_category.less#L66
+									margin: 0;
 									> .product-item-link {
 										height: auto;
 										@media (max-width: 639px) {font-size: 1.33rem;}
