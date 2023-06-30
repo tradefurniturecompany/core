@@ -46,40 +46,40 @@ body.catalog-category-view #maincontent {
 								}
 							}
 						}
-					}
-					> .product-item > .product-item-info {
-						@media (max-width: 639px) {padding: 0;}
-						@media (min-width: 640px) {
-							border: 0; padding: 2px;
-							&:hover, &.active {padding: 0; border-width: 2px !important;}
-						}
-						> .details {
-							> .price-and-wishlist {
-								overflow: hidden; width: 100%;
-								> .price-box.price-final_price {
-									float: left; margin: 0; min-height: auto;
-									//@media (max-width: 639px) {margin: 0;}
-								}
-								> .actions-secondary-container {float: right; padding-right: 0.25rem;}
+						> .product-item-info {
+							@media (max-width: 639px) {padding: 0;}
+							@media (min-width: 640px) {
+								border: 0; padding: 2px;
+								&:hover, &.active {padding: 0; border-width: 2px !important;}
 							}
-							> .name {
-								margin-top: 0; @media (max-width: 639px) {margin-bottom: 0;}
-								> .product-item-link {
-									height: auto;
-									@media (max-width: 639px) {font-size: 1.33rem;}
+							> .details {
+								> .price-and-wishlist {
+									overflow: hidden; width: 100%;
+									> .price-box.price-final_price {
+										float: left; margin: 0; min-height: auto;
+										//@media (max-width: 639px) {margin: 0;}
+									}
+									> .actions-secondary-container {float: right; padding-right: 0.25rem;}
 								}
-							}
-							.product-item-actions {
-								// 2020-10-24
-								// "Remove the «Add to Wishlist» and «Add to Backet» controls
-								// from the frontend category page on narrow screens":
-								// https://github.com/tradefurniturecompany/site/issues/193
-								@media (max-width: 639px) {display: none;}
-								@media (min-width: 640px) {
-									margin: 0;
-									> .actions-primary {position: absolute; top: -200px;}
+								> .name {
+									margin-top: 0; @media (max-width: 639px) {margin-bottom: 0;}
+									> .product-item-link {
+										height: auto;
+										@media (max-width: 639px) {font-size: 1.33rem;}
+									}
 								}
-								> .actions-secondary > .action {line-height: initial; width: auto;}
+								.product-item-actions {
+									// 2020-10-24
+									// "Remove the «Add to Wishlist» and «Add to Backet» controls
+									// from the frontend category page on narrow screens":
+									// https://github.com/tradefurniturecompany/site/issues/193
+									@media (max-width: 639px) {display: none;}
+									@media (min-width: 640px) {
+										margin: 0;
+										> .actions-primary {position: absolute; top: -200px;}
+									}
+									> .actions-secondary > .action {line-height: initial; width: auto;}
+								}
 							}
 						}
 					}
