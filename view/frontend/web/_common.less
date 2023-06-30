@@ -16,3 +16,7 @@ footer.page-footer {
 		@media (max-width: 767px) {h2 {font-size: 2rem; margin: 1.5rem 0;}}
 	}
 }
+// 2023-06-30
+// "The «Subscribe» banner has a wrong width in Magento 2.3.6 on the frontend home page":
+// https://github.com/tradefurniturecompany/site/issues/253
+@media (min-width: 768px), print {.block.newsletter {max-width: none !important;}  }
