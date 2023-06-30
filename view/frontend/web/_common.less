@@ -4,6 +4,11 @@ p {
 	&:empty {display: none; margin: 0;}
 	&:last-of-type {margin-bottom: 0;}
 	> br:first-child {display: none;}
+	// 2023-06-30
+	// "The «Order your wood sample» banner has a wrong height
+	// in Magento 2.3.6 on the /block-mango-sideboard-large page":
+	// https://github.com/tradefurniturecompany/site/issues/254
+	> a > img {height: auto;}
 }
 #maincontent {
 	@media (max-width: 639px) {padding: 0;}
