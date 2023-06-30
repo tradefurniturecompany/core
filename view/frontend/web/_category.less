@@ -83,6 +83,13 @@ body.catalog-category-view #maincontent {
 									@media (max-width: 639px) {display: none;}
 									@media (min-width: 640px) {
 										margin: 0;
+										// 2023-06-30
+										// 1) "The «Add to basket» button is wrongly shifted up in Magento 2.3.6
+										// on frontend product list pages":
+										// https://github.com/tradefurniturecompany/site/issues/252
+										// 2) @media (min-width: 640px) {position: relative;} rule
+										// existed in Magento 2.3.2, but was removed in Magento 2.3.6.
+										position: relative;
 										> .actions-primary {position: absolute; top: -200px;}
 									}
 									> .actions-secondary > .action {line-height: initial; width: auto;}
