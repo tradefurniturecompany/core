@@ -1,4 +1,4 @@
-// 2020-05-15 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+// 2020-05-15 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 // "Hide the text below the primary image from the «Collections» (`/more-collections`) page on narrow screens":
 // https://github.com/tradefurniturecompany/core/issues/30
 define([], function() {return function() {require(['jquery', 'df-scroll', 'domReady!'], function($) {

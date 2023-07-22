@@ -4,7 +4,7 @@ use Magento\Framework\App\Action\Redirect;
 use Magento\Framework\App\RequestInterface as IRequest;
 use Magento\Framework\App\RouterInterface as IRouter;
 use Magento\UrlRewrite\Service\V1\Data\UrlRewrite as Rewrite;
-# 2021-05-11 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+# 2021-05-11 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 # "Redirect frontend product requests to canonical URLs (without a category path included)":
 # https://github.com/tradefurniturecompany/core/issues/40
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */

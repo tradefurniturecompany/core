@@ -21,7 +21,7 @@ class Config extends Sb {
 	 */
 	function aroundNeedPriceConversion(Sb $sb, \Closure $f, $s = null) {
 		$res = 0;
-		# 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+		# 2019-09-20 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 		# "The «Delivery and Installation» fee should be shown with taxes":
 		# https://github.com/tradefurniturecompany/core/issues/3
 		$priceIncludesTax =
@@ -53,7 +53,7 @@ class Config extends Sb {
 	}
 
 	/**
-	 * 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+	 * 2019-09-20 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 	 * "The «Delivery and Installation» fee should be shown with taxes":
 	 * https://github.com/tradefurniturecompany/core/issues/3
 	 * @used-by \TFC\Core\Plugin\Tax\Helper\Data::aroundGetShippingPrice()
@@ -61,7 +61,7 @@ class Config extends Sb {
     static function shippingModeSet(bool $v):void {self::$_shippingMode = $v;}
 
 	/**
-	 * 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+	 * 2019-09-20 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 	 * "The «Delivery and Installation» fee should be shown with taxes":
 	 * https://github.com/tradefurniturecompany/core/issues/3
 	 * @used-by aroundNeedPriceConversion()

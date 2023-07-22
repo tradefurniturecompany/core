@@ -10,7 +10,7 @@
 			type='TFC\Core\Plugin\Catalog\Block\Product\View\GalleryOptions'
 		/>
 	</type>
-<!-- 2021-05-11 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+<!-- 2021-05-11 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 "Redirect frontend product requests to canonical URLs (without a category path included)":
 https://github.com/tradefurniturecompany/core/issues/40 -->
 	<type name='Magento\Framework\App\RouterList'>

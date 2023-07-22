@@ -31,7 +31,7 @@ class Data extends Sb {
 		if ($sa && $sa->getQuote() && $sa->getQuote()->getBillingAddress()) {
 			$billingAddress = $sa->getQuote()->getBillingAddress();
 		}
-		# 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+		# 2019-09-20 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 		# "The «Delivery and Installation» fee should be shown with taxes":
 		# https://github.com/tradefurniturecompany/core/issues/3
 		Config::shippingModeSet(true);
@@ -45,7 +45,7 @@ class Data extends Sb {
 			$store,
 			$sb->shippingPriceIncludesTax($store)
 		);
-		# 2019-09-20 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+		# 2019-09-20 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 		# "The «Delivery and Installation» fee should be shown with taxes":
 		# https://github.com/tradefurniturecompany/core/issues/3
 		Config::shippingModeSet(false);

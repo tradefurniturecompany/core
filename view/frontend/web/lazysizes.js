@@ -1,4 +1,4 @@
-// 2020-01-17 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+// 2020-01-17 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 // 1) "«Defer offscreen images» / Google PageSpeed Insights": https://github.com/tradefurniturecompany/site/issues/151
 // 2) https://web.dev/codelab-use-lazysizes-to-lazyload-images
 // 3) https://github.com/aFarkas/lazysizes/blob/5.2.0/lazysizes.js
